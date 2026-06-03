@@ -125,7 +125,10 @@ class Journal(db.Model):
     user_id = db.Column(
         db.Integer,
         db.ForeignKey('user.id')
-    )    
+    )
+
+    with app.app_context():
+    db.create_all()
     
 @app.route("/add_task", methods=["POST"])
 @login_required
@@ -167,9 +170,6 @@ def complete_task(id):
 
     return redirect(url_for("dashboard"))
     
-    user_id = db.Column(
-    db.Integer,
-    db.ForeignKey('user.id')
     )
 
 
@@ -212,24 +212,21 @@ def login():
 
     if request.method == "POST":
 
-        username = request.form["username"]
-        password = request.form["password"]
+    username = request.form.get("username")
+    password = request.form.get("password")
 
-        user = User.query.filter_by(
-            username=username
-        ).first()
+    user = User.query.filter_by(username=username).first()
 
-        if user and check_password_hash(
-                user.password,
-                password):
+    if user is None:
+        flash("User not found")
+        return redirect(url_for("login"))
 
-            login_user(user)
-
-            return redirect(
-                url_for("dashboard")
-            )
-
-        flash("Invalid Credentials")
+    if check_password_hash(user.password, password):
+        login_user(user)
+        return redirect(url_for("dashboard"))
+    else:
+        flash("Wrong password")
+        return redirect(url_for("login"))
 
     return render_template("login.html")
 
@@ -370,33 +367,6 @@ import os
 from werkzeug.utils import secure_filename
 
 app.config['UPLOAD_FOLDER'] = 'static/uploads/pdfs'
-
-@app.route("/upload_material", methods=["POST"])
-@login_required
-def upload_material():
-
-    file = request.files["pdf"]
-    title = request.form["title"]
-    subject = request.form["subject"]
-
-    filename = secure_filename(file.filename)
-    filepath = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-
-    file.save(filepath)
-
-    material = StudyMaterial(
-        title=title,
-        subject=subject,
-        filename=filename,
-        user_id=current_user.id
-    )
-
-    db.session.add(material)
-    db.session.commit()
-
-    return redirect(url_for("dashboard"))  
-
- 
 
 
 @app.route("/logout")
@@ -554,4 +524,3 @@ import os
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
-
