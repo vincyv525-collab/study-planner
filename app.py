@@ -127,7 +127,9 @@ class Journal(db.Model):
         db.ForeignKey('user.id')
     )
 
-    with app.app_context():
+
+
+with app.app_context():
     db.create_all()
     
 @app.route("/add_task", methods=["POST"])
@@ -160,6 +162,7 @@ def delete_task(id):
     return redirect(url_for("dashboard"))
 @app.route("/complete/<int:id>")
 @login_required
+
 def complete_task(id):
 
     task = Task.query.get(id)
@@ -170,7 +173,7 @@ def complete_task(id):
 
     return redirect(url_for("dashboard"))
     
-    )
+    
 
 
 @login_manager.user_loader
@@ -212,21 +215,21 @@ def login():
 
     if request.method == "POST":
 
-    username = request.form.get("username")
-    password = request.form.get("password")
+        username = request.form.get("username")
+        password = request.form.get("password")
 
-    user = User.query.filter_by(username=username).first()
+        user = User.query.filter_by(username=username).first()
 
-    if user is None:
-        flash("User not found")
-        return redirect(url_for("login"))
+        if user is None:
+            flash("User not found")
+            return redirect(url_for("login"))
 
-    if check_password_hash(user.password, password):
-        login_user(user)
-        return redirect(url_for("dashboard"))
-    else:
-        flash("Wrong password")
-        return redirect(url_for("login"))
+        if check_password_hash(user.password, password):
+            login_user(user)
+            return redirect(url_for("dashboard"))
+        else:
+            flash("Wrong password")
+            return redirect(url_for("login"))
 
     return render_template("login.html")
 
@@ -359,8 +362,6 @@ def change_theme():
 
     return redirect(
         url_for("dashboard"))
-    if not current_user.is_authenticated:
-     return redirect(url_for("login"))
 
     
 import os
