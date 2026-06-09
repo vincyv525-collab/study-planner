@@ -1,12 +1,14 @@
-<<<<<<< HEAD
-const toggle = document.getElementById("theme-toggle");
 
-toggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
-=======
-const toggle = document.getElementById("theme-toggle");
-
-toggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark");
->>>>>>> 51a36ff50b2bab52d0128cc3097faf62b5620509
+new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        labels: ['Completed', 'Pending'],
+        datasets: [{
+            data: [{{ completed }}, {{ pending }}]
+        }]
+    },
+    options: {
+        responsive: true,
+        maintainAspectRatio: false   // 🔥 THIS fixes stretching
+    }
 });
