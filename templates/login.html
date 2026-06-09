@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends 'base.html' %}
 
 {% block content %}
@@ -30,4 +31,38 @@ Create Account
 
 </div>
 
+=======
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card">
+
+<h1>Welcome Back 🌷</h1>
+
+<form method="POST">
+
+<input type="text"
+name="username"
+placeholder="Username"
+required>
+
+<input type="password"
+name="password"
+placeholder="Password"
+required>
+
+<button type="submit">
+Login
+</button>
+
+</form>
+
+<a href="/register">
+Create Account
+</a>
+
+</div>
+
+>>>>>>> 51a36ff50b2bab52d0128cc3097faf62b5620509
 {% endblock %}

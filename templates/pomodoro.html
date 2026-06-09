@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -147,4 +148,206 @@ updateDisplay();
 </script>
 
 </body>
+=======
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🌸 Study Planner Focus Mode</title>
+
+    <style>
+
+        body{
+            margin:0;
+            padding:0;
+
+            min-height:100vh;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            background:linear-gradient(
+                135deg,
+                #ffe4ec,
+                #fff5f8
+            );
+
+            font-family:Arial, sans-serif;
+        }
+
+        .pomodoro-container{
+            text-align:center;
+
+            background:white;
+
+            padding:40px;
+
+            border-radius:30px;
+
+            box-shadow:
+            0 10px 30px rgba(255,182,193,0.3);
+        }
+
+        h1{
+            color:#ff69b4;
+            margin-bottom:25px;
+        }
+
+        .timer-circle{
+
+            width:260px;
+            height:260px;
+
+            margin:auto;
+
+            border-radius:50%;
+
+            background:#fff0f5;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            box-shadow:
+            inset 0 0 20px rgba(255,182,193,0.3),
+            0 8px 20px rgba(255,182,193,0.3);
+        }
+
+        #timer{
+            font-size:60px;
+            font-weight:bold;
+            color:#ff69b4;
+        }
+
+        .buttons{
+            margin-top:30px;
+        }
+
+        button{
+            border:none;
+
+            padding:12px 24px;
+
+            margin:8px;
+
+            border-radius:25px;
+
+            cursor:pointer;
+
+            background:#ffb6c1;
+
+            color:white;
+
+            font-size:16px;
+
+            transition:0.3s;
+        }
+
+        button:hover{
+            transform:translateY(-3px);
+        }
+
+        .quote{
+            margin-top:20px;
+            color:#777;
+            font-style:italic;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="pomodoro-container">
+
+    <h1>🌸 Focus Mode</h1>
+
+    <div class="timer-circle">
+        <div id="timer">25:00</div>
+    </div>
+
+    <div class="buttons">
+        <button onclick="startFocus()">
+            🍓 Focus
+        </button>
+
+        <button onclick="startBreak()">
+            ☕ Break
+        </button>
+
+        <button onclick="pauseTimer()">
+            ⏸ Pause
+        </button>
+    </div>
+
+    <p class="quote">
+        🌷 Small progress is still progress.
+    </p>
+
+</div>
+
+<script>
+
+let timer;
+let timeLeft = 1500;
+
+function updateDisplay(){
+
+    let minutes = Math.floor(timeLeft / 60);
+
+    let seconds = timeLeft % 60;
+
+    document.getElementById("timer").innerHTML =
+        minutes + ":" +
+        (seconds < 10 ? "0" : "") +
+        seconds;
+}
+
+function startTimer(seconds){
+
+    clearInterval(timer);
+
+    timeLeft = seconds;
+
+    updateDisplay();
+
+    timer = setInterval(function(){
+
+        if(timeLeft > 0){
+
+            timeLeft--;
+
+            updateDisplay();
+
+        } else {
+
+            clearInterval(timer);
+
+            alert("🎉 Session Complete!");
+
+        }
+
+    },1000);
+
+}
+
+function startFocus(){
+    startTimer(1500);   // 25 minutes
+}
+
+function startBreak(){
+    startTimer(300);    // 5 minutes
+}
+
+function pauseTimer(){
+    clearInterval(timer);
+}
+
+updateDisplay();
+
+</script>
+
+</body>
+>>>>>>> 51a36ff50b2bab52d0128cc3097faf62b5620509
 </html>

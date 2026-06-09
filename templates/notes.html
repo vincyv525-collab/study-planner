@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends 'base.html' %}
 
 {% block content %}
@@ -43,4 +44,51 @@
 
 </div>
 
+=======
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="notes-page">
+
+    <h1>📝 My Notes</h1>
+
+    <form action="/add_note" method="POST" class="note-form">
+
+        <input
+        type="text"
+        name="title"
+        placeholder="Note Title"
+        required>
+
+        <textarea
+        name="content"
+        placeholder="Write something beautiful..."
+        required></textarea>
+
+        <button type="submit">
+            🌸 Save Note
+        </button>
+
+    </form>
+
+    <div class="notes-grid">
+
+        {% for n in notes %}
+
+        <div class="sticky-note">
+
+            <h3>{{ n.title }}</h3>
+
+            <p>{{ n.content }}</p>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+>>>>>>> 51a36ff50b2bab52d0128cc3097faf62b5620509
 {% endblock %}

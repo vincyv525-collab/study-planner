@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {% extends 'base.html' %}
 
 {% block content %}
@@ -59,4 +60,87 @@ Already have an account? Sign in
 
 </div>
 
+=======
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="card">
+
+<h1>Create Account 💖</h1>
+
+<form method="POST">
+
+<input type="text"
+name="username"
+placeholder="Username"
+required>
+
+<input type="email"
+name="email"
+placeholder="Email"
+required>
+
+<input type="password"
+name="password"
+placeholder="Password"
+required>
+
+<label>Choose Your Avatar 🌸</label>
+
+
+<div class="avatar-selection">
+
+    <label>
+        <input type="radio" name="avatar"
+               value="sakura.png" checked>
+
+        <img src="{{ url_for('static',
+        filename='avatars/sakura.png') }}"
+        class="avatar-option">
+    </label>
+
+    <label>
+        <input type="radio" name="avatar"
+               value="bunny.png">
+
+        <img src="{{ url_for('static',
+        filename='avatars/bunny.png') }}"
+        class="avatar-option">
+    </label>
+
+    <label>
+        <input type="radio" name="avatar"
+               value="cat.png">
+
+        <img src="{{ url_for('static',
+        filename='avatars/cat.png') }}"
+        class="avatar-option">
+    </label>
+
+    <label>
+        <input type="radio" name="avatar"
+               value="moon.png">
+
+        <img src="{{ url_for('static',
+        filename='avatars/moon.png') }}"
+        class="avatar-option">
+    </label>
+
+</div>
+
+<button type="submit">
+Register
+</button>
+
+</form>
+
+<a href="/login">
+Already have an account?
+</a>
+
+</div>
+
+>>>>>>> 51a36ff50b2bab52d0128cc3097faf62b5620509
 {% endblock %}

@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 Flask
 Flask-SQLAlchemy
 Flask-Login
+=======
+Flask
+Flask-SQLAlchemy
+Flask-Login
+>>>>>>> 51a36ff50b2bab52d0128cc3097faf62b5620509
 Werkzeug
