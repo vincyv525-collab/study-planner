@@ -344,6 +344,17 @@ button:hover {
     margin-top: 6px;
     font-size: 14px;
 }
+.chart-container {
+    width: 100%;
+    max-width: 350px;   /* controls size */
+    height: 250px;      /* IMPORTANT FIX */
+    margin: 0 auto;
+}
+
+#taskChart {
+    width: 100% !important;
+    height: 100% !important;
+}
 
 
 
