@@ -149,12 +149,54 @@ button:hover {
 
 /* NOTES */
 .note-card {
-    width: 250px;
-    min-height: 200px;
-    background: #fff;
-    padding: 20px;
-    border-radius: 14px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    width: 220px;
+    min-height: 180px;
+
+    padding: 18px;
+    margin: 12px;
+
+    background: #fff9c4; /* soft sticky yellow */
+    border-radius: 10px;
+
+    box-shadow: 4px 6px 18px rgba(0,0,0,0.15);
+
+    font-family: "Poppins", sans-serif;
+    color: #333;
+
+    position: relative;
+
+    transition: all 0.25s ease;
+
+    transform: rotate(-2deg);
+}
+
+/* Hover effect */
+.note-card:hover {
+    transform: rotate(0deg) scale(1.05);
+    box-shadow: 6px 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Slight "handmade" variation */
+.note-card:nth-child(even) {
+    background: #ffd6e7; /* pink sticky */
+    transform: rotate(2deg);
+}
+
+.note-card:nth-child(3n) {
+    background: #d6f5ff; /* blue sticky */
+    transform: rotate(-1deg);
+}
+
+/* Title inside note */
+.note-card h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+/* Content text */
+.note-card p {
+    font-size: 14px;
+    line-height: 1.4;
 }
 
 /* POMODORO */
