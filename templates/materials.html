@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2 class="section-title">📚 Upload Study Material</h2>
+
+<form action="/upload_material" method="POST" enctype="multipart/form-data" class="white-card">
+
+    <input type="text" name="title" placeholder="Title" required>
+    <input type="text" name="subject" placeholder="Subject" required>
+
+    <input type="file" name="pdf" accept="application/pdf" required>
+
+    <button type="submit">Upload PDF</button>
+
+</form>
+
+
+<h2 id="materials" class="section-title">📚 Study Materials</h2>
+
+<div class="study-materials-section white-card">
+
+{% for m in materials %}
+<div class="material-card">
+
+    <h4>{{ m.title }}</h4>
+
+    <p>{{ m.subject }}</p>
+
+    <a href="{{ url_for('static', filename='uploads/pdfs/' + m.filename) }}"
+       target="_blank"
+       class="view-btn">
+        📄 View PDF
+    </a>
+
+</div>
+{% endfor %}
+
+</div>
+
+{% endblock %}

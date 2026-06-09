@@ -1,0 +1,531 @@
+/* 🌑 GLOBAL DARK THEME */
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #0a0a0f, #12121a, #1a1a25);
+    color: #eaeaf0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ✨ HEADINGS */
+.section-title {
+    margin: 20px 0 10px;
+    color: #c4b5fd;
+}
+
+/* 📦 DARK CARD (replaces white look) */
+.white-card {
+    background: rgba(25, 25, 40, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* 📚 MATERIAL SECTION */
+.study-materials-section {
+    margin-top: 15px;
+}
+
+/* 📄 MATERIAL CARD */
+.material-card {
+    background: linear-gradient(145deg, #1c1c2b, #26263a);
+    padding: 16px;
+    border-radius: 12px;
+    margin: 12px 0;
+    transition: 0.3s;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.material-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.7);
+}
+
+.material-card h4 {
+    color: #60a5fa;
+    margin: 0;
+}
+
+.material-card p {
+    color: #cbd5e1;
+    margin: 6px 0;
+}
+
+/* 🔘 BUTTON */
+button {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(139,92,246,0.6);
+}
+
+/* 📄 VIEW BUTTON */
+.view-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: #22c55e;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.view-btn:hover {
+    background: #16a34a;
+    box-shadow: 0 0 10px rgba(34,197,94,0.6);
+}
+
+/* ✏️ INPUT FIELDS */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: #0f0f18;
+    color: #fff;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #888;
+}
+
+/* 📝 STICKY NOTES (if used on notes page) */
+.sticky-note {
+    background: linear-gradient(145deg, #1f1f2e, #2a2a3d);
+    color: #f1f1f5;
+    padding: 18px;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.sticky-note:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.8);
+}
+
+.sticky-note h3 {
+    color: #a78bfa;
+}
+
+.sticky-note p {
+    color: #d1d5db;
+}
+
+/* 🔐 LOGIN CARD */
+.login-card {
+    width: 350px;
+    margin: 80px auto;
+    text-align: center;
+}
+
+/* 🧊 CARD BASE */
+.card {
+    background: rgba(20, 20, 35, 0.95);
+    backdrop-filter: blur(12px);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.8);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* ✨ TITLE */
+.card h1 {
+    color: #c4b5fd;
+    margin-bottom: 20px;
+}
+
+/* ✏️ INPUTS */
+.card input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #2a2a3d;
+    background: #0f0f18;
+    color: #fff;
+    outline: none;
+    transition: 0.3s;
+}
+
+.card input:focus {
+    border-color: #8b5cf6;
+    box-shadow: 0 0 10px rgba(139,92,246,0.5);
+}
+
+/* 🔘 BUTTON */
+.card button {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* 🔗 REGISTER LINK */
+.auth-link {
+    display: block;
+    margin-top: 15px;
+    color: #a78bfa;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.auth-link:hover {
+    color: #c4b5fd;
+    text-shadow: 0 0 8px rgba(167,139,250,0.6);
+}
+
+/* 📖 JOURNAL PAGE */
+.journal-page {
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+/* 📦 CONTAINER */
+.journal-container {
+    width: 600px;
+}
+
+/* ✨ TITLE */
+.journal-title {
+    text-align: center;
+    color: #f9a8d4; /* soft pink */
+    margin-bottom: 20px;
+}
+
+/* 🧊 FORM */
+.journal-form {
+    background: rgba(25, 25, 40, 0.9);
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+    border: 1px solid rgba(255,255,255,0.05);
+    margin-bottom: 20px;
+}
+
+/* 📅 INPUT ROW */
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+/* ✏️ INPUTS */
+.journal-form input,
+.journal-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: #0f0f18;
+    color: #fff;
+    margin-top: 10px;
+}
+
+/* 🧠 TEXTAREA */
+.journal-form textarea {
+    min-height: 120px;
+    resize: none;
+}
+
+/* 🔘 BUTTON */
+.journal-form button {
+    margin-top: 12px;
+    width: 100%;
+    background: linear-gradient(135deg, #ec4899, #8b5cf6);
+}
+
+/* 📄 JOURNAL CARD */
+.journal-card {
+    background: linear-gradient(145deg, #1c1c2b, #26263a);
+    padding: 18px;
+    border-radius: 14px;
+    margin-bottom: 15px;
+    transition: 0.3s;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.journal-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+}
+
+/* 📝 TEXT STYLING */
+.journal-card h3 {
+    color: #c4b5fd;
+    margin-bottom: 5px;
+}
+
+.journal-card small {
+    color: #9ca3af;
+}
+
+.journal-card p {
+    color: #e5e7eb;
+    margin-top: 10px;
+}
+
+/* 🌑 MAIN LAYOUT */
+.main-content {
+    padding: 20px;
+}
+
+/* 👤 PROFILE SECTION */
+.profile-section {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #8b5cf6;
+    box-shadow: 0 0 20px rgba(139,92,246,0.6);
+    margin-bottom: 10px;
+}
+
+/* 🔗 NAV BUTTONS */
+.quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.nav-btn {
+    background: linear-gradient(135deg, #1f1f2e, #2a2a3d);
+    padding: 10px 14px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #e5e7eb;
+    transition: 0.3s;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.nav-btn:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+}
+
+/* 🎛 THEME SELECT */
+select {
+    background: #0f0f18;
+    color: #fff;
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+
+/* 📊 DASHBOARD */
+.dashboard {
+    margin-top: 20px;
+}
+
+/* 📦 STATS */
+.stats {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    flex: 1;
+    min-width: 100px;
+    background: linear-gradient(145deg, #1c1c2b, #26263a);
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.stat-card h3 {
+    margin: 5px 0;
+    color: #c4b5fd;
+}
+
+/* 📈 PROGRESS BAR */
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background: #1f1f2e;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #ec4899, #8b5cf6);
+}
+
+/* 💬 TASK CARD / QUOTE */
+.task-card {
+    background: rgba(25, 25, 40, 0.9);
+    padding: 15px;
+    border-radius: 12px;
+    margin: 15px 0;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* 🔔 REMINDERS */
+.reminder-box {
+    background: rgba(30, 30, 50, 0.9);
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: 15px;
+}
+
+.reminder-item {
+    background: #1c1c2b;
+    padding: 8px;
+    border-radius: 8px;
+    margin: 5px 0;
+}
+
+/* 🧾 TASK FORM */
+.white-card {
+    background: rgba(25, 25, 40, 0.9);
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* 📋 TASK GRID */
+.tasks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 12px;
+}
+
+/* 🎨 TASK CARD */
+.aesthetic-task-card {
+    background: linear-gradient(145deg, #1c1c2b, #26263a);
+    padding: 15px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: 0.3s;
+}
+
+.aesthetic-task-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+}
+
+/* 🧠 HEADER */
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* 📌 STATUS */
+.task-status.completed {
+    color: #22c55e;
+}
+
+.task-status.pending {
+    color: #facc15;
+}
+
+/* 🔘 BUTTONS */
+.task-buttons {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+}
+
+.complete-btn {
+    background: #22c55e;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.delete-btn {
+    background: #ef4444;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+/* 📅 SEMESTER TITLE */
+#semester {
+    margin-bottom: 15px;
+    color: #c4b5fd;
+}
+
+/* 📦 FORM (already using white-card, just enhancing consistency) */
+.white-card {
+    background: rgba(25, 25, 40, 0.9);
+    padding: 20px;
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
+    margin-bottom: 20px;
+}
+
+/* 📆 EVENT CARD */
+.event-card {
+    display: flex;
+    gap: 15px;
+    background: linear-gradient(145deg, #1c1c2b, #26263a);
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    transition: 0.3s;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.event-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.7);
+}
+
+/* 📅 DATE BOX */
+.event-date {
+    min-width: 90px;
+    text-align: center;
+    background: #0f0f18;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #f9a8d4;
+}
+
+/* 🧾 CONTENT */
+.event-content h3 {
+    margin: 0;
+    color: #60a5fa;
+}
+
+.event-content p {
+    margin: 5px 0;
+    color: #cbd5e1;
+}
+
+/* 🏷 EVENT TAG */
+.event-tag {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    background: linear-gradient(135deg, #8b5cf6, #ec4899);
+    color: white;
+}

@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card">
+
+<h1>Create Account</h1>
+
+<form method="POST">
+
+<input type="text"
+name="username"
+placeholder="Enter Username"
+required>
+
+<input type="email"
+name="email"
+placeholder="Enter Email"
+required>
+
+<input type="password"
+name="password"
+placeholder="Enter Password"
+required>
+
+<div class="avatar-selection">
+
+<label class="avatar-card">
+    <input type="radio" name="avatar" value="user1" checked>
+    <img src="https://api.dicebear.com/7.x/initials/svg?seed=User1">
+</label>
+
+<label class="avatar-card">
+    <input type="radio" name="avatar" value="user2">
+    <img src="https://api.dicebear.com/7.x/initials/svg?seed=User2">
+</label>
+
+<label class="avatar-card">
+    <input type="radio" name="avatar" value="user3">
+    <img src="https://api.dicebear.com/7.x/initials/svg?seed=User3">
+</label>
+
+<label class="avatar-card">
+    <input type="radio" name="avatar" value="user4">
+    <img src="https://api.dicebear.com/7.x/initials/svg?seed=User4">
+</label>
+
+</div>
+
+<button type="submit">
+Create Account
+</button>
+
+</form>
+
+<a href="/login" class="login-link">
+Already have an account? Sign in
+</a>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,257 @@
+{% extends 'base.html' %}
+
+{% block content %}  
+
+<div class="main-content">
+
+<div class="profile-section">
+
+<img
+src="{{ url_for('static',
+filename='avatars/' + user.avatar) }}"
+class="avatar">
+
+<h1>Hi {{ user.username }} 🌸</h1>
+
+<div class="quick-links">
+
+    <a href="/notes" class="nav-btn">
+        📝 Notes
+    </a>
+
+    <a href="/journal" class="nav-btn">
+        📖 Journal
+    </a>
+
+    <a href="/semester" class="nav-btn">
+        📅 Semester Planner
+    </a>
+
+    <a href="/materials" class="nav-btn">
+        📚 Materials
+    </a>
+
+    <a href="/pomodoro" class="nav-btn">
+        ⏱ Pomodoro
+    </a>
+
+</div>
+
+</div>
+
+<form action="/change_theme"
+method="POST">
+
+<select name="theme">
+
+<option value="pink">
+🌸 Sakura Pink
+</option>
+
+<option value="lavender">
+💜 Lavender Dream
+</option>
+
+<option value="blue">
+🌊 Ocean Blue
+</option>
+
+<option value="dark">
+🌙 Dark Academia
+</option>
+
+</select>
+
+<button>
+Save Theme
+</button>
+
+</form>
+
+
+<div class="dashboard">
+
+<div class="stats">
+
+<div class="stat-card">
+📚
+<h3>{{ total }}</h3>
+<p>Total</p>
+</div>
+
+<div class="stat-card">
+✅
+<h3>{{ completed }}</h3>
+<p>Done</p>
+</div>
+
+<div class="stat-card">
+⏳
+<h3>{{ pending }}</h3>
+<p>Pending</p>
+</div>
+
+</div>
+
+<h3>Progress 🌸</h3>
+
+<div class="progress-bar">
+<div class="progress-fill"
+style="width: {{progress}}%;">
+</div>
+</div>
+
+<p>{{progress}}%</p>
+
+
+<div class="stat-card">
+    🏆
+    <h3>{{ badge }}</h3>
+    <p>Achievement</p>
+</div>
+
+
+
+<div class="task-card">
+    <h3>✨ Daily Motivation</h3>
+    <p>{{ quote }}</p>
+</div>
+
+{% if reminders %}
+
+<div class="reminder-box">
+
+    <h3>🌸 Smart Reminders</h3>
+
+    {% for reminder in reminders %}
+
+        <div class="reminder-item">
+
+            {{ reminder }}
+
+        </div>
+
+    {% endfor %}
+
+</div>
+
+{% endif %}
+
+<hr>
+<div class="task-card">
+
+    <h3>📊 Task Completion Overview</h3>
+
+    <canvas id="taskChart"></canvas>
+
+</div>
+
+<script>
+const ctx = document.getElementById('taskChart');
+
+new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        labels: ['Completed', 'Pending'],
+        datasets: [{
+            data: [{{ completed }}, {{ pending }}]
+        }]
+    }
+});
+</script>
+
+<h2>Add Task ✨</h2>
+
+<form action="/add_task" method="POST" class="white-card">
+
+<input
+type="text"
+name="title"
+placeholder="Task Name"
+required>
+
+<input
+type="text"
+name="subject"
+placeholder="Subject"
+required>
+
+<select name="priority">
+
+<option>High</option>
+<option>Medium</option>
+<option>Low</option>
+
+</select>
+
+<input
+type="date"
+name="deadline"
+required>
+
+<button type="submit">
+Add Task
+</button>
+
+</form>
+
+<hr>
+
+<h2 class="section-title">🌸 Your Tasks</h2>
+
+<div class="tasks-grid">
+
+{% for task in tasks %}
+
+<div class="aesthetic-task-card">
+
+    <div class="task-header">
+
+        <h3>{{ task.title }}</h3>
+
+        {% if task.completed %}
+            <span class="task-status completed">
+                ✅ Done
+            </span>
+        {% else %}
+            <span class="task-status pending">
+                ⏳ Pending
+            </span>
+        {% endif %}
+
+    </div>
+
+    <p>📚 {{ task.subject }}</p>
+
+    <p>
+        {% if task.priority == "High" %}
+            🔴 High Priority
+        {% elif task.priority == "Medium" %}
+            🟡 Medium Priority
+        {% else %}
+            🟢 Low Priority
+        {% endif %}
+    </p>
+
+    <p>📅 {{ task.deadline }}</p>
+
+    <div class="task-buttons">
+
+        {% if not task.completed %}
+        <a href="/complete/{{task.id}}" class="complete-btn">
+            ✓ Complete
+        </a>
+        {% endif %}
+
+        <a href="/delete/{{task.id}}" class="delete-btn">
+            🗑 Delete
+        </a>
+
+    </div>
+
+</div>
+
+{% endfor %}
+
+</div>
+{% endblock %}
