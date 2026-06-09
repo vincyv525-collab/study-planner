@@ -1,93 +1,106 @@
-/* Base reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
+body{background: linear-gradient(135deg,#ffc8dd,#cdb4db,#bde0fe);
 
-/* Page background */
-body {
-    background: #f4f6f9;
-    color: #333;
-    line-height: 1.6;
-}
+font-family: Poppins, sans-serif;min-height:100vh;display;flex-direction;align-items;margin: 0;color: #333;}
 
-/* Main container */
-.container {
-    width: 90%;
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 20px;
-}
+nav{margin-top:20px;color;}
 
-/* Headings */
-h1, h2, h3 {
-    color: #222;
-    margin-bottom: 10px;
-}
+.container{width:100%;display;justify-content;margin-top:40px;}
 
-/* Buttons */
-button, .btn {
-    background: #4a90e2;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.3s;
-}
+.card{background(255,255,255,0.3);backdrop-filter(15px);
 
-button:hover, .btn:hover {
-    background: #357abd;
-}
+padding:30px;border-radius:25px;
 
-/* Inputs */
-input, textarea, select {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-}
+width:350px;
 
-/* Cards (for tasks, notes, etc.) */
-.card {
-    background: white;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
+box-shadow:0 8px 32px rgba(31,38,135,0.2);
 
-/* Navbar (if you have one) */
-nav {
-    background: white;
-    padding: 15px 20px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+text-align;
 
-/* Links */
-a {
-    color: #4a90e2;
-    text-decoration: none;
-}
+transition: 0.3s ease;}
 
-a:hover {
-    text-decoration: underline;
-}
+.card{transform: translateY(-5px);}
 
-/* Flash messages */
-.flash {
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 6px;
-    background: #e3f2fd;
-    color: #0d47a1;
-}
+input{width:90%;padding:12px;margin:10px;
+
+border;border-radius:12px;}
+
+button{background:#ff8fab;color;
+
+padding:12px 20px;
+
+border;border-radius:12px;
+
+cursor;
+
+transition: 0.3s;}
+
+button{transform(1.05);box-shadow: 0 8px 20px rgba(255, 143, 171, 0.4);}
+
+.dashboard{width:100%;max-width:900px;margin:0 auto;}
+
+.study-materials-section{width:100%;display;clear;margin-top:20px;}
+
+.material-card{background;padding:20px;margin:15px 0;border-radius:20px;box-shadow:0 8px 20px rgba(255,182,193,0.25);}
+
+.stats{display;gap:15px;margin:20px 0;}
+
+.stat-card{flex:1;background;padding:20px;border-radius:20px;text-align;}
+
+.progress-bar{height:20px;background;border-radius:20px;overflow;}
+
+.progress-fill{height:100%;background:#ff8fab;}
+
+.task-card{background;padding:20px;border-radius:20px;margin:15px 0;text-align;box-shadow:0 8px 20px rgba(255,182,193,0.15);}
+
+select{width:90%;padding:12px;margin:10px;border;border-radius:12px;}
+
+/* DARK MODE FIXED (no duplicates now) */.dark{background:#1f1f2e;color;}
+
+.dark .card,.dark .task-card,.dark .stat-card,.dark .journal-card,.dark .note-card,.dark .material-card{background:#2b2b40;color;}
+
+canvas{max-width:300px;margin;}
+
+.avatar{width:120px;height:120px;
+
+border-radius:50%;
+
+border:4px solid white;
+
+object-fit;
+
+box-shadow:0 4px 12px rgba(0,0,0,0.15);}
+
+.profile-section{text-align;margin-bottom:20px;}
+
+.pink{background(135deg,#ffc8dd,#cdb4db);}
+
+.lavender{background(135deg,#cdb4db,#a2d2ff);}
+
+.blue{background(135deg,#bde0fe,#a2d2ff);}
+
+.avatar-selection{display;flex-wrap;justify-content;gap:15px;margin:20px 0;}
+
+.avatar-selection input{display;}
+
+.avatar-option{width:80px;height:80px;border-radius:50%;object-fit;border:3px solid transparent;cursor;transition:0.3s;}
+
+.avatar-option{transform(1.1);}
+
+.avatar-selection input + .avatar-option{border:4px solid #ff8fab;box-shadow:0 0 15px rgba(255,143,171,0.6);}
+
+.note-card{width:250px;min-height:200px;background:#fff9b0;padding:20px;border-radius:10px;box-shadow:4px 4px 15px rgba(0,0,0,0.15);transform(-2deg);transition:0.3s;}
+
+.note-card(even){background:#ffd6e7;transform(2deg);}
+
+.note-card(3n){background:#d6f5ff;}
+
+.note-card{transform(1.05);}
+
+/* POMODORO */.pomodoro-container{text-align;margin-top:50px;}
+
+.pomodoro-container h1{color:#ff69b4;margin-bottom:30px;}
+
+.timer-circle{width:260px;height:260px;margin;border-radius:50%;background(255,2
 
 
 
