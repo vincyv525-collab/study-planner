@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 {% extends 'base.html' %}
 
 {% block content %}
@@ -47,53 +47,5 @@
 
 </div>
 {% endblock %}
-=======
-{% extends 'base.html' %}
 
-{% block content %}
 
-<div class="journal-page">
-
-    <div class="journal-container">
-
-        <h2 class="journal-title">📖 My Journal</h2>
-
-        <form action="/add_journal" method="POST" class="journal-form">
-
-            <div class="form-row">
-    <input type="text" name="title" placeholder="Journal Title" required>
-
-    <input type="date" name="date" required>
-</div>
-
-            <textarea
-                name="content"
-                placeholder="Write your thoughts..."
-                required>
-            </textarea>
-
-            <button type="submit">
-                💖 Save Journal
-            </button>
-
-        </form>
-
-        {% for j in journals %}
-
-        <div class="journal-card">
-
-            <h3>{{ j.title }}</h3>
-
-            <small>{{ j.date }}</small>
-
-            <p>{{ j.content }}</p>
-
-        </div>
-
-        {% endfor %}
-
-    </div>
-
-</div>
-{% endblock %}
->>>>>>> 51a36ff50b2bab52d0128cc3097faf62b5620509
