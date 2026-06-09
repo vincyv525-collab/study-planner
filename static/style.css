@@ -1,169 +1,128 @@
+/* =========================
+   BASE SYSTEM
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
 body {
-    background: linear-gradient(135deg, #f5f7fa, #e4edf5, #f8fafc);
-    font-family: Poppins, sans-serif;
+    background: #f6f7fb;
+    color: #1f2937;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0;
-    color: #1f2937;
 }
 
-/* NAV */
-nav {
-    margin-top: 20px;
-    color: #111827;
-}
+/* =========================
+   LAYOUT
+========================= */
 
-/* MAIN CONTAINER */
 .container {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
+    max-width: 1100px;
+    margin: 40px auto;
 }
 
-/* CARD */
-.card {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(12px);
-    padding: 30px;
-    border-radius: 18px;
-    width: 350px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    text-align: center;
-    transition: 0.3s ease;
+/* =========================
+   CARDS (GLOBAL)
+========================= */
+
+.card,
+.material-card,
+.stat-card,
+.aesthetic-task-card,
+.note-card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    transition: 0.25s ease;
 }
 
-.card:hover {
-    transform: translateY(-5px);
+/* =========================
+   BUTTONS
+========================= */
+
+button,
+.complete-btn,
+.delete-btn,
+.quick-card {
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.25s ease;
 }
 
-/* INPUT */
-input, select {
-    width: 90%;
-    padding: 12px;
-    margin: 10px;
-    border: 1px solid #d1d5db;
-    border-radius: 10px;
-    outline: none;
-    background: #fff;
-}
-
-/* BUTTON */
+/* primary button */
 button {
     background: #2563eb;
     color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
+    padding: 12px 18px;
 }
 
 button:hover {
-    transform: scale(1.03);
     background: #1d4ed8;
-    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+    transform: translateY(-2px);
 }
 
-/* DASHBOARD */
-.dashboard {
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-}
+/* =========================
+   INPUTS
+========================= */
 
-/* MATERIAL CARD */
-.material-card {
+input, select {
+    width: 90%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    outline: none;
     background: white;
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
 }
 
-/* STATS */
+/* =========================
+   DASHBOARD GRID
+========================= */
+
 .stats {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 15px;
     margin: 20px 0;
 }
 
 .stat-card {
-    flex: 1;
-    background: white;
-    padding: 20px;
-    border-radius: 16px;
-    text-align: center;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-}
-
-/* PROGRESS */
-.progress-bar {
-    height: 12px;
-    background: #e5e7eb;
-    border-radius: 20px;
-    overflow: hidden;
-}
-
-.progress-fill {
-    height: 100%;
-    background: #2563eb;
-}
-
-/* TASK */
-.aesthetic-task-card {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(10px);
-
-    border-radius: 16px;
-
     padding: 18px;
-    margin: 15px 0;
-
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-
-    transition: all 0.25s ease;
-
-    border-left: 5px solid #2563eb; /* accent line */
-
-    font-family: "Poppins", sans-serif;
+    text-align: center;
 }
 
-/* hover effect */
+/* =========================
+   TASK CARDS
+========================= */
+
+.aesthetic-task-card {
+    padding: 18px;
+    margin: 14px 0;
+    border-left: 5px solid #2563eb;
+}
+
 .aesthetic-task-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+    transform: translateY(-4px);
 }
 
-/* task header */
 .task-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-/* title */
-.aesthetic-task-card h3 {
-    margin: 0;
-    font-size: 16px;
-    color: #111827;
-}
-
-/* subject + details */
-.aesthetic-task-card p {
-    margin: 6px 0;
-    font-size: 14px;
-    color: #4b5563;
-}
-
-/* status badges */
 .task-status {
+    font-size: 12px;
     padding: 4px 10px;
     border-radius: 999px;
-    font-size: 12px;
-    font-weight: 600;
 }
 
 .task-status.completed {
@@ -178,182 +137,122 @@ button:hover {
 
 /* buttons */
 .task-buttons {
-    margin-top: 10px;
     display: flex;
     gap: 10px;
+    margin-top: 10px;
 }
 
-/* complete button */
 .complete-btn {
-    padding: 6px 12px;
-    border-radius: 10px;
     background: #22c55e;
     color: white;
-    text-decoration: none;
-    font-size: 13px;
-    transition: 0.2s;
+    padding: 6px 12px;
 }
 
 .complete-btn:hover {
     background: #16a34a;
-    transform: scale(1.05);
 }
 
-/* delete button */
 .delete-btn {
-    padding: 6px 12px;
-    border-radius: 10px;
     background: #ef4444;
     color: white;
-    text-decoration: none;
-    font-size: 13px;
-    transition: 0.2s;
+    padding: 6px 12px;
 }
 
 .delete-btn:hover {
     background: #dc2626;
-    transform: scale(1.05);
 }
 
-/* DARK MODE */
+/* =========================
+   NOTES (STICKY STYLE IMPROVED)
+========================= */
+
+.note-card {
+    width: 220px;
+    min-height: 180px;
+    padding: 16px;
+    margin: 10px;
+
+    background: #fff7d6;
+    transform: rotate(-1deg);
+}
+
+.note-card:nth-child(even) { background: #ffe4ec; transform: rotate(1deg); }
+.note-card:nth-child(3n) { background: #e0f2ff; }
+
+.note-card:hover {
+    transform: rotate(0deg) scale(1.05);
+}
+
+/* =========================
+   QUICK MENU (BUTTON CARDS)
+========================= */
+
+.quick-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.quick-card {
+    padding: 16px;
+    text-align: center;
+    background: white;
+    color: #111827;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.quick-card:hover {
+    background: #2563eb;
+    color: white;
+    transform: translateY(-4px);
+}
+
+/* =========================
+   PROGRESS BAR
+========================= */
+
+.progress-bar {
+    height: 10px;
+    background: #e5e7eb;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #2563eb;
+}
+
+/* =========================
+   CHART
+========================= */
+
+.chart-container {
+    width: 100%;
+    max-width: 350px;
+    height: 250px;
+    margin: auto;
+}
+
+/* =========================
+   DARK MODE (CLEAN)
+========================= */
+
 .dark {
     background: #0f172a;
     color: #e5e7eb;
 }
 
 .dark .card,
-.dark .task-card,
 .dark .stat-card,
-.dark .journal-card,
+.dark .aesthetic-task-card,
 .dark .note-card,
 .dark .material-card {
     background: #1e293b;
     color: #e5e7eb;
-}
-
-/* AVATAR */
-.avatar {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 3px solid #e5e7eb;
-    object-fit: cover;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-/* NOTES */
-.note-card {
-    width: 220px;
-    min-height: 180px;
-
-    padding: 18px;
-    margin: 12px;
-
-    background: #fff9c4; /* soft sticky yellow */
-    border-radius: 10px;
-
-    box-shadow: 4px 6px 18px rgba(0,0,0,0.15);
-
-    font-family: "Poppins", sans-serif;
-    color: #333;
-
-    position: relative;
-
-    transition: all 0.25s ease;
-
-    transform: rotate(-2deg);
-}
-
-/* Hover effect */
-.note-card:hover {
-    transform: rotate(0deg) scale(1.05);
-    box-shadow: 6px 10px 25px rgba(0,0,0,0.2);
-}
-
-/* Slight "handmade" variation */
-.note-card:nth-child(even) {
-    background: #ffd6e7; /* pink sticky */
-    transform: rotate(2deg);
-}
-
-.note-card:nth-child(3n) {
-    background: #d6f5ff; /* blue sticky */
-    transform: rotate(-1deg);
-}
-
-/* Title inside note */
-.note-card h3 {
-    font-size: 16px;
-    margin-bottom: 8px;
-}
-
-/* Content text */
-.note-card p {
-    font-size: 14px;
-    line-height: 1.4;
-}
-
-/* POMODORO */
-.pomodoro-container {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.pomodoro-container h1 {
-    color: #111827;
-    margin-bottom: 30px;
-}
-.quick-links-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 15px;
-    margin-top: 20px;
-}
-
-/* BUTTON CARDS */
-.quick-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    padding: 18px;
-    border-radius: 16px;
-
-    background: white;
-    text-decoration: none;
-    color: #1f2937;
-
-    font-weight: 600;
-
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-
-    transition: all 0.25s ease;
-}
-
-/* hover effect */
-.quick-card:hover {
-    transform: translateY(-6px);
-    background: #2563eb;
-    color: white;
-    box-shadow: 0 12px 25px rgba(37, 99, 235, 0.3);
-}
-
-/* icon spacing */
-.quick-card span {
-    margin-top: 6px;
-    font-size: 14px;
-}
-.chart-container {
-    width: 100%;
-    max-width: 350px;   /* controls size */
-    height: 250px;      /* IMPORTANT FIX */
-    margin: 0 auto;
-}
-
-#taskChart {
-    width: 100% !important;
-    height: 100% !important;
 }
 
 
