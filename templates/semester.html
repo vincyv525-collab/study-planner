@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 {% extends 'base.html' %}
 
 {% block content %}
@@ -66,72 +66,4 @@
 {% endfor %}
 {% endblock %}
 
-=======
-{% extends 'base.html' %}
-
-{% block content %}
-
-<h2 id="semester">📅 Semester Planner</h2>
-
-<form action="/add_event" method="POST" class="white-card">
-
-    <input
-    type="text"
-    name="title"
-    placeholder="Event Name"
-    required>
-
-    <input
-    type="text"
-    name="subject"
-    placeholder="Subject"
-    required>
-
-    <select name="event_type">
-
-        <option>Assignment</option>
-        <option>Internal Test</option>
-        <option>Lab Submission</option>
-        <option>Viva</option>
-        <option>Project Review</option>
-        <option>Semester Exam</option>
-
-    </select>
-
-    <input
-    type="date"
-    name="event_date"
-    required>
-
-    <button type="submit">
-        Add Event
-    </button>
-
-</form>
-
-{% for event in events %}
-
-<div class="event-card">
-
-    <div class="event-date">
-        {{ event.event_date }}
-    </div>
-
-    <div class="event-content">
-
-        <h3>{{ event.title }}</h3>
-
-        <p>📚 {{ event.subject }}</p>
-
-        <span class="event-tag">
-            {{ event.event_type }}
-        </span>
-
-    </div>
-
-</div>
-
-{% endfor %}
-{% endblock %}
-
->>>>>>> 51a36ff50b2bab52d0128cc3097faf62b5620509
+>>>>> 51a36ff50b2bab52d0128cc3097faf62b5620509
