@@ -1,0 +1,48 @@
+[33mcommit 2a01bfa20d13cc7f403dee93d918f56375199ef4[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Vaishnavi Thyagarajan <vincy525@gmail.com>
+Date:   Tue Jun 9 22:49:05 2026 +0530
+
+    Fix requirements.txt
+
+[33mcommit b347531b2bf9a5f70b7bb1283b368b5eaa0c8ff3[m
+Author: Vaishnavi Thyagarajan <vincy525@gmail.com>
+Date:   Tue Jun 9 22:42:09 2026 +0530
+
+    first commit from local
+
+[33mcommit a1d4f7cbf3a76a862070ae6aadecfbb5bd42d48c[m
+Merge: 9721b20 51a36ff
+Author: Vaishnavi Thyagarajan <vincy525@gmail.com>
+Date:   Tue Jun 9 22:31:42 2026 +0530
+
+    fixed merge conflict
+
+[33mcommit 9721b20ea64c714433d3a2c6a704b72c4af49cc2[m
+Author: Vaishnavi Thyagarajan <vincy525@gmail.com>
+Date:   Tue Jun 9 22:15:24 2026 +0530
+
+    first commit from local
+
+[33mcommit 51a36ff50b2bab52d0128cc3097faf62b5620509[m
+Author: vincyv525-collab <vincyv525@gmail.com>
+Date:   Wed Jun 3 23:56:12 2026 +0530
+
+    Update app.py
+
+[33mcommit dafc34b6a467a0c1ec661f58ce3458766c2fe1c5[m
+Author: vincyv525-collab <vincyv525@gmail.com>
+Date:   Wed Jun 3 23:45:16 2026 +0530
+
+    Update app.py
+
+[33mcommit 456222648784623d2117fe3698f695bdc2a2b86f[m
+Author: vincyv525-collab <vincyv525@gmail.com>
+Date:   Wed Jun 3 23:28:09 2026 +0530
+
+    Update app.py
+
+[33mcommit 5d33430ad67f7d9a76775f23e9a002b35f731a46[m
+Author: vincyv525-collab <vincyv525@gmail.com>
+Date:   Wed Jun 3 22:25:16 2026 +0530
+
+    Add files via upload
