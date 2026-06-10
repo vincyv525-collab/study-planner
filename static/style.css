@@ -345,6 +345,73 @@ button {
 .note-card p {
     color: #fff !important;
 }
+/* =========================
+   STICKY NOTE STYLE
+========================= */
+
+.note-card {
+    width: 240px;
+    min-height: 180px;
+
+    padding: 18px;
+
+    background: #fef08a; /* classic sticky note yellow */
+    color: #111827;
+
+    border-radius: 6px;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.15),
+        inset 0 -8px 20px rgba(0,0,0,0.05);
+
+    position: relative;
+
+    transform: rotate(-2deg); /* slight tilt */
+    transition: 0.25s ease;
+}
+
+/* random tilt for realistic messy board */
+.note-card:nth-child(2n) {
+    transform: rotate(2deg);
+}
+
+.note-card:nth-child(3n) {
+    transform: rotate(-1deg);
+}
+
+/* hover = lift effect */
+.note-card:hover {
+    transform: scale(1.05) rotate(0deg);
+    z-index: 10;
+}
+
+/* top tape effect */
+.note-card::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 60px;
+    height: 18px;
+
+    background: rgba(255,255,255,0.6);
+
+    border-radius: 4px;
+}
+
+/* text */
+.note-card h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.note-card p {
+    font-size: 14px;
+    line-height: 1.5;
+}
 
 
 
