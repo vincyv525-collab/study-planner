@@ -155,28 +155,95 @@ input, select {
 }
 
 /* =========================
-   NOTES (SUBTLE STICKY)
+   NOTES CONTAINER
+========================= */
+
+.notes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* =========================
+   NOTE CARD (AESTHETIC)
 ========================= */
 
 .note-card {
-    width: 220px;
-    min-height: 160px;
+    width: 240px;
+    min-height: 180px;
 
-    padding: 14px;
-    margin: 10px;
+    padding: 16px;
 
-    background: #fafafa;
-    border-radius: 10px;
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #f8fafc
+    );
 
     border: 1px solid #e5e7eb;
 
-    transition: 0.2s;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+
+    position: relative;
+
+    transition: 0.25s ease;
 }
 
+/* subtle top highlight (paper feel) */
+.note-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 6px;
+    width: 100%;
+
+    background: #111827;
+    border-radius: 12px 12px 0 0;
+}
+
+/* hover effect */
 .note-card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.08);
 }
 
+/* =========================
+   TEXT STYLING
+========================= */
+
+.note-card h3 {
+    margin-top: 8px;
+    font-size: 16px;
+    color: #111827;
+}
+
+.note-card p {
+    font-size: 14px;
+    color: #4b5563;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+/* =========================
+   OPTIONAL COLOR VARIANTS
+========================= */
+
+.note-card:nth-child(3n) {
+    background: linear-gradient(135deg, #ffffff, #eef2ff);
+}
+
+.note-card:nth-child(3n+1) {
+    background: linear-gradient(135deg, #ffffff, #f0fdf4);
+}
+
+.note-card:nth-child(3n+2) {
+    background: linear-gradient(135deg, #ffffff, #fefce8);
+}
 /* =========================
    STATS
 ========================= */
