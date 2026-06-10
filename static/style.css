@@ -336,7 +336,15 @@ button {
     background: black !important;
     color: white !important;
 }
+.note-card {
+    background: #000 !important;
+    color: #fff !important;
+}
 
+.note-card h3,
+.note-card p {
+    color: #fff !important;
+}
 
 
 
