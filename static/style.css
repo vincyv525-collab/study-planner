@@ -247,6 +247,46 @@ input, select {
     background: #111827;
     border: 1px solid #1f2937;
 }
+/* =========================
+   GLOBAL CENTER FIX
+========================= */
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* centers horizontally */
+    text-align: center;    /* centers text */
+}
+
+/* Main container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+    text-align: center;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Inputs */
+input, select {
+    text-align: center;
+}
+
+/* Buttons */
+button {
+    display: block;
+    margin: 10px auto;
+}
 
 
 
