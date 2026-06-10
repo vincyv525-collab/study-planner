@@ -332,6 +332,11 @@ button {
     transform: translateY(-2px);
 }
 
+.note-card {
+    background: black !important;
+    color: white !important;
+}
+
 
 
 
