@@ -214,6 +214,7 @@ def register():
 def login():
 
     if request.method == "POST":
+        print(request.form)
 
         username = request.form.get("username")
         password = request.form.get("password")
@@ -232,6 +233,7 @@ def login():
             return redirect(url_for("login"))
 
     return render_template("login.html")
+    
 
 
 @app.route("/dashboard")
