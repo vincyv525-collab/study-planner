@@ -332,21 +332,9 @@ button {
     transform: translateY(-2px);
 }
 
-.note-card {
-    background: black !important;
-    color: white !important;
-}
-.note-card {
-    background: #000 !important;
-    color: #fff !important;
-}
 
-.note-card h3,
-.note-card p {
-    color: #fff !important;
-}
 /* =========================
-   STICKY NOTE STYLE
+   STICKY NOTE FINAL
 ========================= */
 
 .note-card {
@@ -355,7 +343,7 @@ button {
 
     padding: 18px;
 
-    background: #fef08a; /* classic sticky note yellow */
+    background: #fef08a;
     color: #111827;
 
     border-radius: 6px;
@@ -366,11 +354,10 @@ button {
 
     position: relative;
 
-    transform: rotate(-2deg); /* slight tilt */
+    transform: rotate(-2deg);
     transition: 0.25s ease;
 }
 
-/* random tilt for realistic messy board */
 .note-card:nth-child(2n) {
     transform: rotate(2deg);
 }
@@ -379,13 +366,11 @@ button {
     transform: rotate(-1deg);
 }
 
-/* hover = lift effect */
 .note-card:hover {
     transform: scale(1.05) rotate(0deg);
     z-index: 10;
 }
 
-/* top tape effect */
 .note-card::before {
     content: "";
     position: absolute;
@@ -397,19 +382,14 @@ button {
     height: 18px;
 
     background: rgba(255,255,255,0.6);
-
     border-radius: 4px;
 }
 
-/* text */
 .note-card h3 {
-    font-size: 16px;
     margin-bottom: 8px;
-    font-weight: 600;
 }
 
 .note-card p {
-    font-size: 14px;
     line-height: 1.5;
 }
 
