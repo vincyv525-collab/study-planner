@@ -192,6 +192,104 @@ input, select {
         transform: translateY(0);
     }
 }
+/* 🌸 SECTION TITLES */
+.section-title {
+    margin: 20px 0 10px;
+    font-weight: 600;
+}
+
+/* 🌸 FORM CARD */
+.white-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    margin-bottom: 20px;
+}
+
+/* 🌸 INPUTS */
+.white-card input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #f3c6d1;
+    margin-bottom: 12px;
+    transition: 0.25s;
+}
+
+.white-card input:focus {
+    outline: none;
+    border-color: #ff8fab;
+    box-shadow: 0 0 0 3px rgba(255, 143, 171, 0.15);
+}
+
+/* 🌸 UPLOAD BUTTON */
+.white-card button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    border: none;
+    background: #ff8fab;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.white-card button:hover {
+    background: #ff6f91;
+    transform: translateY(-2px);
+}
+
+/* 🌸 MATERIALS GRID */
+.study-materials-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+/* 🌸 MATERIAL CARD ✨ */
+.material-card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 16px;
+    border: 1px solid #ffe4ec;
+    transition: 0.3s;
+}
+
+/* hover effect */
+.material-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 182, 193, 0.25);
+}
+
+/* 🌸 TITLE */
+.material-card h4 {
+    margin: 0 0 5px;
+}
+
+/* 🌸 SUBJECT */
+.material-card p {
+    font-size: 13px;
+    color: #666;
+}
+
+/* 🌸 VIEW BUTTON */
+.view-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 12px;
+    border-radius: 10px;
+    background: #ffe4ec;
+    color: #111;
+    text-decoration: none;
+    font-size: 13px;
+    transition: 0.25s;
+}
+
+.view-btn:hover {
+    background: #ffc2d1;
+}
 
 
 
