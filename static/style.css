@@ -1,200 +1,190 @@
-/* 🌗 ROOT COLORS */
-:root {
-    --bg-main: #f5f6f8;
-    --bg-soft: #ffffff;
-    --bg-dark-soft: #e8eaed;
-
-    --accent: #d1d5db;
-
-    --text-main: #111111;
-    --text-light: #555;
-
-    --shadow: rgba(0, 0, 0, 0.08);
-}
-
-/* 🌸 BODY */
+/* 🌸 RESET */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: var(--bg-main);
-    color: var(--text-main);
-}
+    background: #f7f2f2;
+    color: #333;
 
-/* 🧠 LAYOUT */
-.app {
     display: flex;
-    height: 100vh;
+    justify-content: center;
 }
 
-/* 📁 SIDEBAR */
+/* 💖 MAIN CENTER */
+.app, .container, .main {
+    width: 900px;
+    margin: auto;
+}
+
+/* 🧠 TITLE */
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin: 20px 0;
+    color: #444;
+}
+
+/* 🔘 TOP NAV (FORCED FROM SIDEBAR) */
 .sidebar {
-    width: 220px;
-    background: var(--bg-soft);
-    padding: 20px;
-
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    justify-content: center;
+    gap: 12px;
 
-    border-right: 1px solid #ddd;
+    width: 100%;
+    background: transparent;
+    border: none;
+    padding: 10px 0;
 }
 
-/* title */
-.sidebar h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
+/* 🔘 BUTTONS (GLOBAL) */
+button,
+.nav-btn,
+.sidebar a {
 
-/* 🔘 REAL BUTTON NAV */
-.nav-btn {
-    background: var(--bg-dark-soft);
+    background: #f8d7da;
     border: none;
 
-    padding: 10px 12px;
-    border-radius: 10px;
-
-    text-align: left;
-    font-size: 14px;
-
-    cursor: pointer;
-
-    transition: 0.2s ease;
-}
-
-/* hover */
-.nav-btn:hover {
-    background: #dcdfe3;
-}
-
-/* active page */
-.nav-btn.active {
-    background: #111;
-    color: white;
-}
-
-/* click press effect */
-.nav-btn:active {
-    transform: scale(0.96);
-}
-
-/* 🖥 MAIN */
-.main {
-    flex: 1;
-    padding: 25px;
-    overflow-y: auto;
-}
-
-/* headings */
-h1 {
-    font-size: 22px;
-    margin-bottom: 15px;
-}
-
-/* ✨ CARDS */
-.section {
-    background: var(--bg-soft);
-    padding: 18px;
+    padding: 10px 16px;
     border-radius: 12px;
 
-    margin-bottom: 18px;
+    cursor: pointer;
+    font-size: 14px;
 
-    box-shadow: 0 4px 15px var(--shadow);
-}
-
-/* 📊 STATS */
-.stats {
-    display: flex;
-    gap: 12px;
-}
-
-.stat-card {
-    flex: 1;
-    background: var(--bg-dark-soft);
-    padding: 12px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-/* 📝 NOTES (CLEAN STICKY STYLE) */
-.notes-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 12px;
-}
-
-.note-card {
-    background: #fffdf5;
-    padding: 12px;
-    border-radius: 10px;
-
-    font-size: 13px;
-
-    border: 1px solid #eee;
-
-    position: relative;
     transition: 0.2s;
 }
 
-.note-card:hover {
-    transform: translateY(-3px);
+button:hover,
+.nav-btn:hover,
+.sidebar a:hover {
+    background: #f4b6c2;
 }
 
-/* subtle pin */
-.note-card::before {
+button:active,
+.nav-btn:active {
+    transform: scale(0.95);
+}
+
+.nav-btn.active {
+    background: #e89aa6;
+    color: white;
+}
+
+/* 📦 UNIVERSAL CARD SYSTEM */
+.login-card,
+.section,
+.card,
+.task,
+.note-card {
+
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 18px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    margin-bottom: 20px;
+
+    position: relative;
+}
+
+/* 🎀 HEADER STRIP */
+.login-card h2,
+.section h2, .section h3,
+.card h2, .card h3 {
+
+    background: #f8d7da;
+
+    margin: -18px -18px 12px -18px;
+    padding: 10px;
+
+    border-radius: 18px 18px 0 0;
+    font-size: 14px;
+}
+
+/* 📌 TAPE EFFECT */
+.login-card::after,
+.section::after,
+.card::after {
     content: "";
-    width: 8px;
+    width: 30px;
     height: 8px;
-    background: #111;
-    border-radius: 50%;
+    background: #f8d7da;
 
     position: absolute;
-    top: 6px;
-    left: 50%;
-    transform: translateX(-50%);
+    top: -5px;
+    left: 20px;
+
+    border-radius: 4px;
+}
+
+/* 🧾 GRID LAYOUT */
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* FULL WIDTH (like schedule) */
+.main > :nth-child(2) {
+    grid-column: span 2;
+}
+
+/* 📝 NOTES (LINED PAPER LOOK) */
+.note-card,
+textarea {
+    background: #fffdf5;
+
+    background-image: linear-gradient(#eee 1px, transparent 1px);
+    background-size: 100% 24px;
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    border: none;
+    outline: none;
+    resize: none;
+    font-family: inherit;
+}
+
+/* ✨ NOTE HOVER */
+.note-card:hover {
+    transform: translateY(-4px);
 }
 
 /* ✅ TASKS */
 .task {
-    background: var(--bg-dark-soft);
-    padding: 10px;
-    border-radius: 10px;
+    background: #fdfdfd;
+    border: 1px solid #eee;
 
     display: flex;
-    gap: 8px;
     align-items: center;
+    gap: 10px;
 
-    margin-bottom: 8px;
-}
-
-/* 🔘 PRIMARY BUTTON */
-.primary-btn {
-    background: #111;
-    color: white;
-
-    border: none;
-    padding: 8px 14px;
-
-    border-radius: 8px;
-    cursor: pointer;
+    padding: 10px 12px;
+    border-radius: 12px;
 
     transition: 0.2s;
 }
 
-.primary-btn:hover {
-    opacity: 0.85;
+.task:hover {
+    background: #f8f8f8;
 }
 
-.primary-btn:active {
-    transform: scale(0.95);
+/* 📋 LIST STYLE */
+ul {
+    list-style: none;
+    padding: 0;
 }
 
-/* 📥 INPUT */
+li {
+    border-bottom: 1px solid #ddd;
+    padding: 8px 0;
+}
+
+/* 📥 INPUTS */
 input {
-    padding: 8px;
     border-radius: 8px;
     border: 1px solid #ddd;
-
-    font-size: 14px;
+    padding: 8px;
 }
 
 /* 🔐 LOGIN */
@@ -204,19 +194,11 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background: var(--bg-main);
 }
 
 .login-card {
     width: 300px;
-
-    background: var(--bg-soft);
-    padding: 25px;
-
-    border-radius: 12px;
-
-    box-shadow: 0 10px 30px var(--shadow);
+    text-align: center;
 }
 
 
