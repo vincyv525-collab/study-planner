@@ -12,6 +12,21 @@ body {
     margin: auto;
     padding: 20px;
 }
+/* 🌸 ONLY LOGIN PAGE STYLING */
+.login-page input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ffd6e0;
+}
+
+.login-page button {
+    background: #ff8fab;
+    color: white;
+}
+
+.login-page a {
+    color: #ff8fab;
+}
 
 /* 🌸 TITLE */
 h1 {
