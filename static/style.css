@@ -2,80 +2,74 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-
-    background: linear-gradient(135deg, #ffe4ec, #fdf2f8, #e0f2fe);
-    color: #4b5563;
+    background: #fdf2f8;
 }
 
-/* 🧠 APP LAYOUT */
+/* 🧠 LAYOUT */
 .app {
     display: flex;
     height: 100vh;
 }
 
-/* 🎀 SIDEBAR (SOFT GIRLY) */
+/* 🎀 SIDEBAR */
 .sidebar {
     width: 220px;
-
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(12px);
-
-    border-right: 1px solid rgba(255,255,255,0.5);
+    background: #ffffff;
 
     padding: 20px;
+
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
+
+    border-right: 1px solid #fbcfe8;
 }
 
-.sidebar h2 {
-    font-size: 18px;
-    color: #ec4899;
-}
+/* 💖 NAV BUTTONS (THIS IS THE BIG FIX) */
+.nav-btn {
+    border: none;
+    background: #fce7f3;
 
-/* nav */
-.nav-item {
     padding: 10px;
     border-radius: 10px;
+
+    text-align: left;
     cursor: pointer;
 
     transition: 0.25s;
+    font-size: 14px;
 }
 
-.nav-item:hover {
-    background: #fce7f3;
-}
-
-.nav-item.active {
+.nav-btn:hover {
     background: #f9a8d4;
+    color: white;
+    transform: translateX(4px);
+}
+
+.nav-btn.active {
+    background: #ec4899;
     color: white;
 }
 
 /* 🌈 MAIN */
 .main {
     flex: 1;
-    padding: 30px;
+    padding: 25px;
     overflow-y: auto;
 }
 
-.main h1 {
-    color: #ec4899;
-}
-
-/* ✨ SECTION CARDS */
+/* 📦 SECTION */
 .section {
-    background: rgba(255,255,255,0.6);
-    backdrop-filter: blur(10px);
+    background: white;
+    padding: 18px;
 
-    padding: 20px;
-    border-radius: 16px;
+    border-radius: 14px;
+    margin-bottom: 18px;
 
-    margin-bottom: 20px;
-
-    box-shadow: 0 8px 25px rgba(255, 182, 193, 0.3);
+    box-shadow: 0 5px 20px rgba(236, 72, 153, 0.1);
 }
 
-/* 📝 STICKY NOTES (CUTEEE) */
+/* 📝 NOTES */
 .notes-container {
     display: flex;
     flex-wrap: wrap;
@@ -83,15 +77,13 @@ body {
 }
 
 .note-card {
-    width: 180px;
-    min-height: 140px;
+    width: 170px;
+    min-height: 130px;
 
-    background: #fff9c4;
-
+    background: #fef08a;
     padding: 12px;
-    border-radius: 12px;
 
-    font-size: 13px;
+    border-radius: 12px;
 
     position: relative;
 
@@ -99,7 +91,6 @@ body {
     transition: 0.3s;
 }
 
-/* random rotation for messy cute look */
 .note-card:nth-child(even) {
     transform: rotate(2deg);
 }
@@ -118,20 +109,16 @@ body {
 }
 
 /* ✅ TASKS */
-.tasks-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
 .task {
-    background: #ffffff;
+    background: #fff;
     padding: 10px;
     border-radius: 10px;
 
     display: flex;
-    gap: 10px;
     align-items: center;
+    gap: 10px;
+
+    margin-bottom: 10px;
 
     box-shadow: 0 3px 10px rgba(0,0,0,0.05);
 }
@@ -144,43 +131,16 @@ body {
 }
 
 .stat-card {
-    background: #ffffff;
-
+    background: #fce7f3;
     padding: 15px;
+
     border-radius: 12px;
-
     text-align: center;
-
-    box-shadow: 0 4px 15px rgba(255,182,193,0.2);
 }
 
-/* 🔘 BUTTONS (SOFT PINK) */
+/* 🔘 GENERAL BUTTONS */
 button {
-    background: linear-gradient(135deg, #f472b6, #ec4899);
-    color: white;
-
-    border: none;
-    padding: 8px 14px;
-
-    border-radius: 10px;
-    cursor: pointer;
-
-    transition: 0.3s;
-}
-
-button:hover {
-    transform: scale(1.05);
-}
-
-/* 📥 INPUTS */
-input {
-    width: 100%;
-    padding: 8px;
-
-    border-radius: 8px;
-    border: 1px solid #fbcfe8;
-
-    background: #fff;
+    font-family: inherit;
 }
 
 /* 🔐 LOGIN */
@@ -190,24 +150,18 @@ input {
     justify-content: center;
     align-items: center;
 
-    background: linear-gradient(135deg, #fbcfe8, #e0f2fe);
+    background: #fdf2f8;
 }
 
 .login-card {
     width: 320px;
 
-    background: rgba(255,255,255,0.7);
-    backdrop-filter: blur(10px);
-
+    background: white;
     padding: 25px;
+
     border-radius: 16px;
 
-    box-shadow: 0 10px 30px rgba(255,182,193,0.4);
-}
-
-/* 💖 HEADINGS */
-h2 {
-    color: #ec4899;
+    box-shadow: 0 10px 30px rgba(236,72,153,0.2);
 }
 
 
