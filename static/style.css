@@ -181,6 +181,127 @@ body.dark .nav-btn {
 body.dark .note-card {
     background: #3a3a44;
 }
+/* 🌸 FEATURE CARDS GLOW-UP */
+
+/* ADD TASKS */
+.add-task-card {
+    background: linear-gradient(135deg, #ffd6de, #ffe5ec);
+    border-radius: 16px;
+    padding: 15px;
+}
+
+/* YOUR TASKS */
+.your-tasks-card {
+    background: #fff5f7;
+    border-left: 5px solid #ff8fab;
+    border-radius: 16px;
+    padding: 15px;
+}
+
+/* NOTES (already sticky but improved) */
+.note-card {
+    background: #ffe5ec;
+    border-radius: 16px;
+    padding: 16px;
+    transform: rotate(-1deg);
+}
+
+/* TIMER ⏰ */
+.timer-card {
+    background: linear-gradient(135deg, #ffc2d1, #ffb3c6);
+    border-radius: 18px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+/* JOURNAL 📔 */
+.journal-card {
+    background: #fff0f3;
+    border-radius: 16px;
+    padding: 15px;
+}
+
+/* GRAPH 📊 */
+.graph-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 15px;
+    box-shadow: inset 0 0 10px rgba(255, 182, 193, 0.2);
+}
+
+/* PROGRESS 💪 */
+.progress-card {
+    background: #ffe5ec;
+    border-radius: 16px;
+    padding: 15px;
+}
+
+.progress-bar {
+    height: 10px;
+    background: #ffd6de;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress {
+    background: #ff8fab;
+    height: 100%;
+}
+
+/* MATERIALS 📚 */
+.material-card {
+    background: linear-gradient(135deg, #fff0f3, #ffe5ec);
+    border-radius: 16px;
+    padding: 15px;
+}
+
+/* SEMESTER 🎓 */
+.semester-card {
+    background: linear-gradient(135deg, #ffd6de, #ffc2d1);
+    border-radius: 16px;
+    padding: 15px;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* 🌸 HOVER MAGIC FOR ALL */
+.add-task-card:hover,
+.your-tasks-card:hover,
+.note-card:hover,
+.timer-card:hover,
+.journal-card:hover,
+.graph-card:hover,
+.progress-card:hover,
+.material-card:hover,
+.semester-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    transition: 0.25s ease;
+}
+
+/* 🌸 INPUTS INSIDE CARDS */
+input, textarea {
+    border-radius: 10px;
+    border: 1px solid #f1cbd3;
+    padding: 8px;
+    background: #fff;
+}
+
+/* 🌸 DARK MODE SUPPORT */
+body.dark .add-task-card,
+body.dark .your-tasks-card,
+body.dark .note-card,
+body.dark .journal-card,
+body.dark .graph-card,
+body.dark .progress-card,
+body.dark .material-card,
+body.dark .semester-card {
+    background: #2a2a32;
+}
+
+body.dark .timer-card {
+    background: linear-gradient(135deg, #ff8fab, #ff4d6d);
+}
 
 
 
