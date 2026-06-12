@@ -1,203 +1,158 @@
-/* 🌸 RESET */
+/* 🌸 BODY */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: #f7f2f2;
+    background: #f5f3f4;
     color: #333;
+}
 
-    display: flex;
-    justify-content: center;
+/* 🖼 HEADER BANNER */
+body::before {
+    content: "";
+    display: block;
+    height: 120px;
+
+    background: url('https://i.pinimg.com/736x/6f/9b/9a/6f9b9a8d41a61a3d8b2c7bb3db7f6c3f.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 /* 💖 MAIN CENTER */
 .app, .container, .main {
-    width: 900px;
+    width: 1000px;
     margin: auto;
 }
 
 /* 🧠 TITLE */
 h1 {
-    text-align: center;
-    font-size: 36px;
-    margin: 20px 0;
-    color: #444;
+    font-size: 24px;
+    margin: 15px 0;
 }
 
-/* 🔘 TOP NAV (FORCED FROM SIDEBAR) */
+/* 🔘 NAV (TOP BUTTON STYLE) */
 .sidebar {
     display: flex;
-    justify-content: center;
-    gap: 12px;
-
-    width: 100%;
-    background: transparent;
-    border: none;
-    padding: 10px 0;
+    gap: 10px;
+    margin-bottom: 15px;
 }
 
-/* 🔘 BUTTONS (GLOBAL) */
-button,
-.nav-btn,
-.sidebar a {
-
-    background: #f8d7da;
+button, .nav-btn, .sidebar a {
+    background: #f3d6d9;
     border: none;
 
-    padding: 10px 16px;
-    border-radius: 12px;
+    padding: 8px 14px;
+    border-radius: 10px;
 
+    font-size: 13px;
     cursor: pointer;
-    font-size: 14px;
 
     transition: 0.2s;
 }
 
-button:hover,
-.nav-btn:hover,
-.sidebar a:hover {
-    background: #f4b6c2;
+button:hover {
+    background: #eec2c7;
 }
 
-button:active,
-.nav-btn:active {
+button:active {
     transform: scale(0.95);
 }
 
-.nav-btn.active {
-    background: #e89aa6;
-    color: white;
-}
-
-/* 📦 UNIVERSAL CARD SYSTEM */
-.login-card,
-.section,
-.card,
-.task,
-.note-card {
-
-    background: #ffffff;
-    border-radius: 18px;
-    padding: 18px;
-
-    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    margin-bottom: 20px;
-
-    position: relative;
-}
-
-/* 🎀 HEADER STRIP */
-.login-card h2,
-.section h2, .section h3,
-.card h2, .card h3 {
-
-    background: #f8d7da;
-
-    margin: -18px -18px 12px -18px;
-    padding: 10px;
-
-    border-radius: 18px 18px 0 0;
-    font-size: 14px;
-}
-
-/* 📌 TAPE EFFECT */
-.login-card::after,
-.section::after,
-.card::after {
-    content: "";
-    width: 30px;
-    height: 8px;
-    background: #f8d7da;
-
-    position: absolute;
-    top: -5px;
-    left: 20px;
-
-    border-radius: 4px;
-}
-
-/* 🧾 GRID LAYOUT */
+/* 📦 GRID DASHBOARD */
 .main {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
 }
 
-/* FULL WIDTH (like schedule) */
-.main > :nth-child(2) {
-    grid-column: span 2;
+/* 📦 UNIVERSAL CARD */
+.section, .card, .task, .note-card, .login-card {
+    background: #ffffff;
+
+    border-radius: 16px;
+    padding: 15px;
+
+    border: 1px solid #f0dede;
 }
 
-/* 📝 NOTES (LINED PAPER LOOK) */
-.note-card,
-textarea {
-    background: #fffdf5;
+/* 🎀 SOFT HEADER */
+.section h2, .section h3,
+.card h2, .card h3 {
+    background: #f3d6d9;
 
-    background-image: linear-gradient(#eee 1px, transparent 1px);
-    background-size: 100% 24px;
+    margin: -15px -15px 10px -15px;
+    padding: 8px;
+
+    border-radius: 16px 16px 0 0;
+    font-size: 13px;
 }
 
+/* 🧾 MINI CARDS GRID (like navigation icons) */
+.section .grid, .cards, .items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.section .grid div,
+.card-small {
+    background: #fdf7f7;
+    border-radius: 12px;
+    padding: 10px;
+
+    text-align: center;
+    font-size: 12px;
+
+    transition: 0.2s;
+}
+
+.section .grid div:hover {
+    transform: translateY(-3px);
+}
+
+/* 📝 NOTES */
 textarea {
     width: 100%;
     height: 120px;
+
     border: none;
     outline: none;
-    resize: none;
-    font-family: inherit;
-}
 
-/* ✨ NOTE HOVER */
-.note-card:hover {
-    transform: translateY(-4px);
+    background: transparent;
+
+    background-image: linear-gradient(#eee 1px, transparent 1px);
+    background-size: 100% 22px;
 }
 
 /* ✅ TASKS */
 .task {
-    background: #fdfdfd;
-    border: 1px solid #eee;
-
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
 
-    padding: 10px 12px;
-    border-radius: 12px;
-
-    transition: 0.2s;
+    padding: 6px 0;
+    border-bottom: 1px solid #eee;
 }
 
-.task:hover {
-    background: #f8f8f8;
+/* 📅 CALENDAR / BIG BLOCK */
+.main > :nth-child(2) {
+    grid-column: span 2;
 }
 
-/* 📋 LIST STYLE */
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    border-bottom: 1px solid #ddd;
-    padding: 8px 0;
-}
-
-/* 📥 INPUTS */
-input {
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    padding: 8px;
+/* 💗 SIDE WIDGETS */
+.main > :nth-child(odd) {
+    background: #fff;
 }
 
 /* 🔐 LOGIN */
 .login-wrapper {
     height: 100vh;
-
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .login-card {
-    width: 300px;
+    width: 280px;
     text-align: center;
 }
 
