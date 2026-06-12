@@ -1,123 +1,120 @@
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Focus Timer</title>
 
-   <style>
+    <style>
 
-body{
-    margin:0;
-    padding:0;
-    min-height:100vh;
+        body{
+            margin:0;
+            padding:0;
+            min-height:100vh;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+            display:flex;
+            justify-content:center;
+            align-items:center;
 
-    background: linear-gradient(135deg, #fff1f5, #ffe4ec);
-    font-family:'Segoe UI', sans-serif;
-    color:#333;
-}
+            background: linear-gradient(135deg, #f8f9fb, #eef1f5);
+            font-family:'Segoe UI', sans-serif;
+            color:#333;
+        }
 
-/* 🌸 CONTAINER */
-.pomodoro-container{
-    text-align:center;
-    background: rgba(255,255,255,0.7);
-    backdrop-filter: blur(15px);
-    padding:40px;
-    border-radius:20px;
-    width:340px;
+        /* 🌸 CONTAINER */
+        .pomodoro-container{
+            text-align:center;
+            background: rgba(255,255,255,0.8);
+            backdrop-filter: blur(12px);
+            padding:40px;
+            border-radius:20px;
+            width:340px;
 
-    box-shadow: 0 10px 40px rgba(255, 143, 171, 0.25);
-    animation: fadeIn 0.6s ease;
-}
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            animation: fadeIn 0.6s ease;
+        }
 
-/* 🌸 TITLE */
-h1{
-    color:#ff6f91;
-    margin-bottom:25px;
-    font-weight:600;
-    letter-spacing:0.5px;
-}
+        /* 🌸 TITLE */
+        h1{
+            color:#222;
+            margin-bottom:25px;
+            font-weight:600;
+        }
 
-/* 🌸 TIMER CIRCLE */
-.timer-circle{
-    width:220px;
-    height:220px;
-    margin:auto;
-    border-radius:50%;
+        /* 🌸 TIMER CIRCLE */
+        .timer-circle{
+            width:220px;
+            height:220px;
+            margin:auto;
+            border-radius:50%;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+            display:flex;
+            justify-content:center;
+            align-items:center;
 
-    background: radial-gradient(circle, #fff, #ffe4ec);
-    box-shadow: inset 0 0 20px rgba(255, 143, 171, 0.3),
-                0 10px 30px rgba(255, 143, 171, 0.2);
+            background: radial-gradient(circle, #ffffff, #f5f5f5);
 
-    transition: 0.3s;
-}
+            box-shadow: inset 0 0 15px rgba(0,0,0,0.05),
+                        0 10px 25px rgba(0,0,0,0.08);
 
-/* 🌸 TIME TEXT */
-#timer{
-    font-size:48px;
-    font-weight:700;
-    color:#ff4d6d;
-}
+            transition: 0.3s;
+        }
 
-/* 🌸 BUTTONS */
-.buttons{
-    margin-top:30px;
-}
+        /* 🌸 TIME TEXT */
+        #timer{
+            font-size:48px;
+            font-weight:700;
+            color:#333;
+        }
 
-button{
-    border:none;
-    padding:10px 18px;
-    margin:8px;
-    border-radius:12px;
-    cursor:pointer;
+        /* 🌸 BUTTONS */
+        .buttons{
+            margin-top:30px;
+        }
 
-    background:#ff8fab;
-    color:white;
-    font-size:14px;
+        button{
+            border:none;
+            padding:10px 18px;
+            margin:8px;
+            border-radius:12px;
+            cursor:pointer;
 
-    transition:0.25s;
-}
+            background:#e8aeb7;
+            color:white;
+            font-size:14px;
 
-/* hover */
-button:hover{
-    background:#ff6f91;
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 5px 15px rgba(255, 143, 171, 0.4);
-}
+            transition:0.25s;
+        }
 
-/* 🌸 QUOTE */
-.quote{
-    margin-top:20px;
-    color:#777;
-    font-size:14px;
-    font-style: italic;
-}
+        button:hover{
+            background:#d98c98;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+        }
 
-/* 🌸 ANIMATION */
-@keyframes fadeIn{
-    from{
-        opacity:0;
-        transform: translateY(20px);
-    }
-    to{
-        opacity:1;
-        transform: translateY(0);
-    }
-}
+        button:active{
+            transform: scale(0.95);
+        }
 
-/* 🌸 BUTTON ACTIVE EFFECT */
-button:active{
-    transform: scale(0.95);
-}
+        /* 🌸 QUOTE */
+        .quote{
+            margin-top:20px;
+            color:#777;
+            font-size:14px;
+            font-style: italic;
+        }
 
-</style>
+        /* 🌸 ANIMATION */
+        @keyframes fadeIn{
+            from{
+                opacity:0;
+                transform: translateY(20px);
+            }
+            to{
+                opacity:1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
 </head>
 
 <body>
@@ -172,11 +169,11 @@ function startTimer(seconds){
 }
 
 function startFocus(){
-    startTimer(1500); // 25 min
+    startTimer(1500);
 }
 
 function startBreak(){
-    startTimer(300); // 5 min
+    startTimer(300);
 }
 
 function pauseTimer(){
@@ -188,5 +185,4 @@ updateDisplay();
 </script>
 
 </body>
-
 </html>
