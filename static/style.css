@@ -12,19 +12,19 @@ body {
     margin: auto;
     padding: 20px;
 }
-/* 🌸 ONLY LOGIN PAGE STYLING */
-.login-page input {
+/* 🌸 ONLY LOGIN CARD STYLING */
+.login-card input {
     padding: 10px;
     border-radius: 10px;
     border: 1px solid #ffd6e0;
 }
 
-.login-page button {
+.login-card button {
     background: #ff8fab;
     color: white;
 }
 
-.login-page a {
+.login-card a {
     color: #ff8fab;
 }
 
