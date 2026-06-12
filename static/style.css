@@ -2,7 +2,8 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: #fdf2f8;
+    background: #fafafa;
+    color: #374151;
 }
 
 /* 🧠 LAYOUT */
@@ -11,136 +12,148 @@ body {
     height: 100vh;
 }
 
-/* 🎀 SIDEBAR */
+/* ✨ SIDEBAR (clean + minimal) */
 .sidebar {
-    width: 220px;
+    width: 200px;
     background: #ffffff;
 
     padding: 20px;
+    border-right: 1px solid #eee;
 
     display: flex;
     flex-direction: column;
-    gap: 10px;
-
-    border-right: 1px solid #fbcfe8;
+    gap: 8px;
 }
 
-/* 💖 NAV BUTTONS (THIS IS THE BIG FIX) */
-.nav-btn {
-    border: none;
-    background: #fce7f3;
+.sidebar h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
 
-    padding: 10px;
-    border-radius: 10px;
+/* 🔘 NAV BUTTONS */
+.nav-btn {
+    background: none;
+    border: none;
+
+    padding: 8px 10px;
+    border-radius: 8px;
 
     text-align: left;
     cursor: pointer;
 
-    transition: 0.25s;
     font-size: 14px;
+    color: #4b5563;
+
+    transition: 0.2s;
 }
 
 .nav-btn:hover {
-    background: #f9a8d4;
-    color: white;
-    transform: translateX(4px);
+    background: #f3f4f6;
 }
 
 .nav-btn.active {
-    background: #ec4899;
+    background: #111827;
     color: white;
 }
 
 /* 🌈 MAIN */
 .main {
     flex: 1;
-    padding: 25px;
+    padding: 30px 40px;
     overflow-y: auto;
 }
 
 /* 📦 SECTION */
 .section {
-    background: white;
-    padding: 18px;
-
-    border-radius: 14px;
-    margin-bottom: 18px;
-
-    box-shadow: 0 5px 20px rgba(236, 72, 153, 0.1);
+    margin-bottom: 30px;
 }
 
-/* 📝 NOTES */
+/* 🧾 SECTION TITLE */
+.section h2 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    color: #9ca3af;
+}
+
+/* 📝 NOTES (CLEAN GRID, NOT MESSY) */
 .notes-container {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 15px;
 }
 
 .note-card {
-    width: 170px;
-    min-height: 130px;
-
-    background: #fef08a;
-    padding: 12px;
+    background: #ffffff;
+    padding: 14px;
 
     border-radius: 12px;
+    border: 1px solid #eee;
 
-    position: relative;
+    font-size: 13px;
 
-    transform: rotate(-2deg);
-    transition: 0.3s;
-}
-
-.note-card:nth-child(even) {
-    transform: rotate(2deg);
+    transition: 0.2s;
 }
 
 .note-card:hover {
-    transform: scale(1.05) rotate(0deg);
-}
-
-/* 📌 pin */
-.note-card::before {
-    content: "📍";
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
 }
 
 /* ✅ TASKS */
 .task {
-    background: #fff;
-    padding: 10px;
-    border-radius: 10px;
-
     display: flex;
     align-items: center;
     gap: 10px;
 
-    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
 
-    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    transition: 0.2s;
+}
+
+.task:hover {
+    background: #f9fafb;
 }
 
 /* 📊 STATS */
 .stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 12px;
+    display: flex;
+    gap: 20px;
 }
 
 .stat-card {
-    background: #fce7f3;
-    padding: 15px;
+    background: #ffffff;
+    padding: 15px 20px;
 
     border-radius: 12px;
-    text-align: center;
+    border: 1px solid #eee;
+
+    font-size: 14px;
 }
 
-/* 🔘 GENERAL BUTTONS */
-button {
-    font-family: inherit;
+/* 🔘 PRIMARY BUTTON */
+.primary-btn {
+    background: #111827;
+    color: white;
+
+    border: none;
+    padding: 8px 14px;
+
+    border-radius: 8px;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.primary-btn:hover {
+    background: #374151;
+}
+
+/* 📥 INPUT */
+input {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
 }
 
 /* 🔐 LOGIN */
@@ -149,19 +162,16 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background: #fdf2f8;
 }
 
 .login-card {
-    width: 320px;
-
-    background: white;
+    width: 300px;
     padding: 25px;
 
-    border-radius: 16px;
+    background: white;
+    border-radius: 12px;
 
-    box-shadow: 0 10px 30px rgba(236,72,153,0.2);
+    border: 1px solid #eee;
 }
 
 
