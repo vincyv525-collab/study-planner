@@ -158,7 +158,113 @@ input, select {
 h1 span, h2 span {
     color: #ff8fab;
 }
+/* 🌸 RESET */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fff1f5, #fdfdfd);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
+/* 🌸 CONTAINER */
+.main-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 🌸 LOGIN CARD ✨ */
+.login-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    padding: 30px;
+    border-radius: 20px;
+    width: 320px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(255, 182, 193, 0.25);
+    animation: fadeUp 0.8s ease;
+}
+
+/* 🌸 TITLE */
+.login-card h1 {
+    margin-bottom: 20px;
+}
+
+/* 🌸 INPUTS */
+.login-card input {
+    width: 90%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 10px;
+    border: 1px solid #ffd6e0;
+    background: #fff;
+    transition: 0.3s;
+}
+
+.login-card input:focus {
+    outline: none;
+    border-color: #ff8fab;
+    box-shadow: 0 0 8px rgba(255, 143, 171, 0.3);
+}
+
+/* 🌸 BUTTON */
+.login-card button {
+    margin-top: 10px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #ff8fab, #ffb3c6);
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-card button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 143, 171, 0.4);
+}
+
+/* 🌸 LINK */
+.login-card a {
+    display: block;
+    margin-top: 12px;
+    color: #ff8fab;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.login-card a:hover {
+    text-decoration: underline;
+}
+
+/* 🌸 STUDY PLANNER TEXT */
+body::before {
+    content: "Study Planner ✨";
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font-weight: bold;
+    color: #444;
+    opacity: 0.7;
+}
+
+/* 🌸 ANIMATIONS ✨ */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 
 
