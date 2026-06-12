@@ -1,10 +1,23 @@
+/* 🌗 ROOT COLORS */
+:root {
+    --bg-main: #f5f6f8;
+    --bg-soft: #ffffff;
+    --bg-dark-soft: #e8eaed;
+
+    --accent: #d1d5db;
+
+    --text-main: #111111;
+    --text-light: #555;
+
+    --shadow: rgba(0, 0, 0, 0.08);
+}
+
 /* 🌸 BODY */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-
-    background: linear-gradient(135deg, #ffe4ec, #fdf2f8, #e0f2fe);
-    color: #444;
+    background: var(--bg-main);
+    color: var(--text-main);
 }
 
 /* 🧠 LAYOUT */
@@ -13,186 +26,197 @@ body {
     height: 100vh;
 }
 
-/* 🎀 SIDEBAR (soft glass) */
+/* 📁 SIDEBAR */
 .sidebar {
-    width: 230px;
-
-    background: rgba(255,255,255,0.5);
-    backdrop-filter: blur(15px);
-
+    width: 220px;
+    background: var(--bg-soft);
     padding: 20px;
+
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
 
-    border-right: 1px solid rgba(255,255,255,0.4);
+    border-right: 1px solid #ddd;
 }
 
 /* title */
 .sidebar h2 {
-    color: #ff4da6;
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
-/* 💖 NAV BUTTONS */
+/* 🔘 REAL BUTTON NAV */
 .nav-btn {
-    background: rgba(255,255,255,0.6);
+    background: var(--bg-dark-soft);
     border: none;
 
-    padding: 10px;
-    border-radius: 12px;
+    padding: 10px 12px;
+    border-radius: 10px;
+
+    text-align: left;
+    font-size: 14px;
 
     cursor: pointer;
-    text-align: left;
 
-    transition: 0.3s;
+    transition: 0.2s ease;
 }
 
+/* hover */
 .nav-btn:hover {
-    background: #ffb6d9;
-    color: white;
-    transform: translateX(5px);
+    background: #dcdfe3;
 }
 
+/* active page */
 .nav-btn.active {
-    background: #ff4da6;
+    background: #111;
     color: white;
 }
 
-/* 🌈 MAIN */
+/* click press effect */
+.nav-btn:active {
+    transform: scale(0.96);
+}
+
+/* 🖥 MAIN */
 .main {
     flex: 1;
-    padding: 30px;
+    padding: 25px;
     overflow-y: auto;
 }
 
 /* headings */
 h1 {
-    color: #ff4da6;
+    font-size: 22px;
+    margin-bottom: 15px;
 }
 
 /* ✨ CARDS */
 .section {
-    background: rgba(255,255,255,0.6);
-    backdrop-filter: blur(10px);
+    background: var(--bg-soft);
+    padding: 18px;
+    border-radius: 12px;
 
-    padding: 20px;
-    border-radius: 18px;
+    margin-bottom: 18px;
 
-    margin-bottom: 20px;
-
-    box-shadow: 0 10px 30px rgba(255, 182, 193, 0.4);
+    box-shadow: 0 4px 15px var(--shadow);
 }
 
 /* 📊 STATS */
 .stats {
     display: flex;
-    gap: 15px;
+    gap: 12px;
 }
 
 .stat-card {
     flex: 1;
-    background: linear-gradient(135deg, #ffc1e3, #cde7ff);
-
-    padding: 15px;
-    border-radius: 15px;
-
+    background: var(--bg-dark-soft);
+    padding: 12px;
+    border-radius: 10px;
     text-align: center;
-    color: #333;
 }
 
-/* 📝 NOTES (CUTE BUT CLEAN) */
+/* 📝 NOTES (CLEAN STICKY STYLE) */
 .notes-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 15px;
+    gap: 12px;
 }
 
 .note-card {
-    background: linear-gradient(135deg, #fff9c4, #ffe4ec);
-
-    padding: 15px;
-    border-radius: 15px;
+    background: #fffdf5;
+    padding: 12px;
+    border-radius: 10px;
 
     font-size: 13px;
 
+    border: 1px solid #eee;
+
     position: relative;
-    transition: 0.3s;
+    transition: 0.2s;
 }
 
 .note-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-3px);
 }
 
-/* 📌 pin */
+/* subtle pin */
 .note-card::before {
-    content: "📍";
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: #111;
+    border-radius: 50%;
+
     position: absolute;
-    top: -8px;
+    top: 6px;
     left: 50%;
     transform: translateX(-50%);
 }
 
 /* ✅ TASKS */
 .task {
-    background: rgba(255,255,255,0.8);
-
+    background: var(--bg-dark-soft);
     padding: 10px;
-    border-radius: 12px;
+    border-radius: 10px;
 
     display: flex;
-    gap: 10px;
+    gap: 8px;
     align-items: center;
 
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
-/* 🔘 BUTTONS */
+/* 🔘 PRIMARY BUTTON */
 .primary-btn {
-    background: linear-gradient(135deg, #ff4da6, #ff85c1);
-
+    background: #111;
     color: white;
+
     border: none;
+    padding: 8px 14px;
 
-    padding: 8px 15px;
-    border-radius: 12px;
-
+    border-radius: 8px;
     cursor: pointer;
-    transition: 0.3s;
+
+    transition: 0.2s;
 }
 
 .primary-btn:hover {
-    transform: scale(1.08);
+    opacity: 0.85;
+}
+
+.primary-btn:active {
+    transform: scale(0.95);
 }
 
 /* 📥 INPUT */
 input {
     padding: 8px;
-    border-radius: 10px;
-    border: none;
+    border-radius: 8px;
+    border: 1px solid #ddd;
 
-    background: rgba(255,255,255,0.8);
+    font-size: 14px;
 }
 
 /* 🔐 LOGIN */
 .login-wrapper {
     height: 100vh;
+
     display: flex;
     justify-content: center;
     align-items: center;
 
-    background: linear-gradient(135deg, #ffc1e3, #cde7ff);
+    background: var(--bg-main);
 }
 
 .login-card {
-    width: 320px;
+    width: 300px;
 
-    background: rgba(255,255,255,0.7);
-    backdrop-filter: blur(15px);
-
+    background: var(--bg-soft);
     padding: 25px;
-    border-radius: 20px;
 
-    box-shadow: 0 15px 40px rgba(255,182,193,0.5);
+    border-radius: 12px;
+
+    box-shadow: 0 10px 30px var(--shadow);
 }
 
 
