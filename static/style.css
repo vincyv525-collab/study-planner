@@ -416,6 +416,117 @@ input, select {
         transform: translateY(0);
     }
 }
+/* 🌸 NOTES PAGE */
+.notes-page {
+    padding: 30px;
+    background: #fff6f9;
+}
+
+/* 🌸 FORM */
+.note-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    margin-bottom: 25px;
+}
+
+/* 🌸 INPUTS */
+.note-form input,
+.note-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #f3c6d1;
+    margin-bottom: 12px;
+    transition: 0.25s;
+}
+
+/* focus */
+.note-form input:focus,
+.note-form textarea:focus {
+    outline: none;
+    border-color: #ff8fab;
+    box-shadow: 0 0 0 3px rgba(255, 143, 171, 0.15);
+}
+
+/* 🌸 BUTTON */
+.note-form button {
+    padding: 10px;
+    width: 100%;
+    border-radius: 12px;
+    border: none;
+    background: #ff8fab;
+    color: white;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.note-form button:hover {
+    background: #ff6f91;
+    transform: translateY(-2px);
+}
+
+/* 🌸 GRID */
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+/* 🌸 STICKY NOTE ✨ */
+.sticky-note {
+    padding: 15px;
+    border-radius: 12px;
+    background: #fff0f5;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+
+    transform: rotate(-2deg);
+    transition: 0.3s;
+    position: relative;
+}
+
+/* random slight rotation for variety */
+.sticky-note:nth-child(2n) {
+    transform: rotate(2deg);
+    background: #ffe4ec;
+}
+
+.sticky-note:nth-child(3n) {
+    transform: rotate(-1deg);
+    background: #fff5f8;
+}
+
+/* hover */
+.sticky-note:hover {
+    transform: rotate(0deg) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* 🌸 PIN EFFECT 📌 */
+.sticky-note::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: #ff8fab;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 🌸 TITLE */
+.sticky-note h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* 🌸 TEXT */
+.sticky-note p {
+    font-size: 14px;
+    line-height: 1.4;
+}
 
 
 
