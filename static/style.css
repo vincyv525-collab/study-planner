@@ -2,80 +2,110 @@
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: #fafafa;
+    background: #fff7fb;
     color: #374151;
 }
 
-/* 🧠 LAYOUT */
+/* 🧠 APP LAYOUT */
 .app {
     display: flex;
     height: 100vh;
 }
 
-/* ✨ SIDEBAR (clean + minimal) */
+/* 💖 SIDEBAR */
 .sidebar {
-    width: 200px;
+    width: 210px;
     background: #ffffff;
 
-    padding: 20px;
-    border-right: 1px solid #eee;
+    padding: 18px;
 
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
+
+    border-right: 1px solid #f1f5f9;
 }
 
+/* logo */
 .sidebar h2 {
-    font-size: 16px;
-    margin-bottom: 10px;
+    font-size: 17px;
+    margin-bottom: 12px;
+    color: #ec4899;
 }
 
-/* 🔘 NAV BUTTONS */
+/* 🎯 NAV BUTTONS */
 .nav-btn {
-    background: none;
     border: none;
+    background: transparent;
 
-    padding: 8px 10px;
-    border-radius: 8px;
+    padding: 10px;
+    border-radius: 10px;
 
     text-align: left;
     cursor: pointer;
 
     font-size: 14px;
-    color: #4b5563;
+    color: #6b7280;
 
     transition: 0.2s;
 }
 
 .nav-btn:hover {
-    background: #f3f4f6;
+    background: #fce7f3;
+    color: #ec4899;
 }
 
 .nav-btn.active {
-    background: #111827;
+    background: #ec4899;
     color: white;
 }
 
 /* 🌈 MAIN */
 .main {
     flex: 1;
-    padding: 30px 40px;
+    padding: 25px 35px;
     overflow-y: auto;
 }
 
-/* 📦 SECTION */
-.section {
-    margin-bottom: 30px;
+/* page title */
+.main h1 {
+    font-size: 22px;
+    margin-bottom: 20px;
 }
 
-/* 🧾 SECTION TITLE */
+/* 📦 SECTIONS */
+.section {
+    margin-bottom: 25px;
+}
+
+/* section titles */
 .section h2 {
-    font-size: 16px;
+    font-size: 15px;
     margin-bottom: 12px;
     color: #9ca3af;
 }
 
-/* 📝 NOTES (CLEAN GRID, NOT MESSY) */
+/* 📊 STATS */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 12px;
+}
+
+.stat-card {
+    background: #ffffff;
+
+    padding: 14px;
+    border-radius: 14px;
+
+    border: 1px solid #f1f5f9;
+
+    text-align: center;
+
+    box-shadow: 0 4px 15px rgba(236,72,153,0.08);
+}
+
+/* 📝 NOTES (THIS WAS YOUR BIG ISSUE) */
 .notes-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -84,10 +114,11 @@ body {
 
 .note-card {
     background: #ffffff;
-    padding: 14px;
 
-    border-radius: 12px;
-    border: 1px solid #eee;
+    padding: 14px;
+    border-radius: 14px;
+
+    border: 1px solid #f1f5f9;
 
     font-size: 13px;
 
@@ -95,8 +126,8 @@ body {
 }
 
 .note-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(236,72,153,0.12);
 }
 
 /* ✅ TASKS */
@@ -112,48 +143,32 @@ body {
 }
 
 .task:hover {
-    background: #f9fafb;
-}
-
-/* 📊 STATS */
-.stats {
-    display: flex;
-    gap: 20px;
-}
-
-.stat-card {
-    background: #ffffff;
-    padding: 15px 20px;
-
-    border-radius: 12px;
-    border: 1px solid #eee;
-
-    font-size: 14px;
+    background: #fdf2f8;
 }
 
 /* 🔘 PRIMARY BUTTON */
 .primary-btn {
-    background: #111827;
+    background: #ec4899;
     color: white;
 
     border: none;
     padding: 8px 14px;
 
-    border-radius: 8px;
+    border-radius: 10px;
     cursor: pointer;
 
     transition: 0.2s;
 }
 
 .primary-btn:hover {
-    background: #374151;
+    background: #db2777;
 }
 
 /* 📥 INPUT */
 input {
     padding: 8px;
-    border-radius: 6px;
-    border: 1px solid #ddd;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
 }
 
 /* 🔐 LOGIN */
@@ -166,12 +181,14 @@ input {
 
 .login-card {
     width: 300px;
-    padding: 25px;
 
     background: white;
-    border-radius: 12px;
+    padding: 25px;
 
-    border: 1px solid #eee;
+    border-radius: 16px;
+
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 10px 30px rgba(236,72,153,0.15);
 }
 
 
