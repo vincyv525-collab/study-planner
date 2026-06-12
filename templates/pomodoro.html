@@ -107,6 +107,8 @@
             transform: scale(0.95);
         }
 
+        
+
         /* 🌸 QUOTE */
         .quote{
             margin-top:20px;
@@ -126,6 +128,25 @@
                 transform: translateY(0);
             }
         }
+        /* 🌸 STATS BOX */
+.stats-box{
+    margin-top:25px;
+    padding:15px;
+    border-radius:15px;
+    background: rgba(255,255,255,0.7);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    font-size:14px;
+}
+
+.stats-box h3{
+    margin-bottom:8px;
+    color:#444;
+}
+
+.stats-box span{
+    font-weight:700;
+    color:#e8aeb7;
+}
 
     </style>
 </head>
@@ -156,11 +177,19 @@
     <p class="quote">
         Stay consistent. Small progress adds up.
     </p>
+    
+    <div class="stats-box">
+    <h3>📊 Your Progress</h3>
+    <p>Sessions Completed: <span id="sessionCount">0</span></p>
+        
+</div>
 
 </div>
 
 <script>
-
+    
+let sessionCount = localStorage.getItem("sessions") || 0;
+document.getElementById("sessionCount").innerText = sessionCount;
 let timer;
 let timeLeft = 1500;
 let totalTime = 1500;
@@ -215,6 +244,14 @@ function pauseTimer(){
 
 /* 🌸 CUTE FINISH MESSAGE (NO UGLY ALERT) */
 function showDone(){
+
+    // ✅ increase sessions ONLY for focus mode
+    if(totalTime === 1500){
+        sessionCount++;
+        localStorage.setItem("sessions", sessionCount);
+        document.getElementById("sessionCount").innerText = sessionCount;
+    }
+
     const box = document.createElement("div");
 
     box.innerHTML = "✨ Session Complete ✨";
@@ -232,8 +269,7 @@ function showDone(){
 
     setTimeout(() => box.remove(), 3000);
 }
-
-updateDisplay();
+    
 
 </script>
 
