@@ -527,6 +527,131 @@ input, select {
     font-size: 14px;
     line-height: 1.4;
 }
+/* 🌸 PAGE */
+#semester {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff6f91;
+}
+
+/* 🌸 FORM CARD */
+.white-card {
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(255, 143, 171, 0.2);
+    margin-bottom: 30px;
+}
+
+/* inputs */
+.white-card input,
+.white-card select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 10px;
+    border: 1px solid #f3c6d1;
+    transition: 0.25s;
+}
+
+.white-card input:focus,
+.white-card select:focus {
+    outline: none;
+    border-color: #ff8fab;
+    box-shadow: 0 0 0 3px rgba(255,143,171,0.2);
+}
+
+/* button */
+.white-card button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 12px;
+    border: none;
+    background: #ff8fab;
+    color: white;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.white-card button:hover {
+    background: #ff6f91;
+    transform: translateY(-2px);
+}
+
+/* 🌸 EVENT CARD */
+.event-card {
+    display: flex;
+    align-items: center;
+
+    background: #fff;
+    border-radius: 16px;
+    padding: 15px;
+    margin-bottom: 15px;
+
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+/* hover */
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255,143,171,0.2);
+}
+
+/* 🌸 DATE BOX */
+.event-date {
+    min-width: 90px;
+    text-align: center;
+    font-weight: 600;
+
+    background: #ffe4ec;
+    color: #ff4d6d;
+
+    padding: 10px;
+    border-radius: 12px;
+    margin-right: 15px;
+}
+
+/* 🌸 CONTENT */
+.event-content h3 {
+    margin: 0;
+    color: #333;
+}
+
+.event-content p {
+    margin: 5px 0;
+    color: #777;
+}
+
+/* 🌸 TAG */
+.event-tag {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+
+    background: #fff0f5;
+    color: #ff6f91;
+}
+
+/* 🌸 ANIMATION */
+.event-card {
+    animation: fadeUp 0.4s ease;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 
 
