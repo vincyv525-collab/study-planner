@@ -1,10 +1,10 @@
-/* 🌸 RESET + BASE */
+/* 🌸 BASE */
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: #f9fafb;
-    color: #1f2937;
-    font-size: 14px;
+
+    background: linear-gradient(135deg, #ffe4ec, #fdf2f8, #e0f2fe);
+    color: #4b5563;
 }
 
 /* 🧠 APP LAYOUT */
@@ -13,11 +13,14 @@ body {
     height: 100vh;
 }
 
-/* 📂 SIDEBAR */
+/* 🎀 SIDEBAR (SOFT GIRLY) */
 .sidebar {
     width: 220px;
-    background: #ffffff;
-    border-right: 1px solid #e5e7eb;
+
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+
+    border-right: 1px solid rgba(255,255,255,0.5);
 
     padding: 20px;
     display: flex;
@@ -27,97 +30,91 @@ body {
 
 .sidebar h2 {
     font-size: 18px;
-    margin-bottom: 10px;
+    color: #ec4899;
 }
 
-/* Nav items */
+/* nav */
 .nav-item {
-    padding: 8px 12px;
-    border-radius: 8px;
+    padding: 10px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: 0.2s;
-    color: #374151;
+
+    transition: 0.25s;
 }
 
 .nav-item:hover {
-    background: #f3f4f6;
+    background: #fce7f3;
 }
 
 .nav-item.active {
-    background: #e0e7ff;
-    color: #4338ca;
+    background: #f9a8d4;
+    color: white;
 }
 
-/* 🧾 MAIN CONTENT */
+/* 🌈 MAIN */
 .main {
     flex: 1;
-    padding: 25px 35px;
+    padding: 30px;
     overflow-y: auto;
 }
 
 .main h1 {
-    font-size: 22px;
-    margin-bottom: 15px;
+    color: #ec4899;
 }
 
-/* 📦 SECTIONS */
+/* ✨ SECTION CARDS */
 .section {
-    background: #ffffff;
-    border: 1px solid #e5e7eb;
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(10px);
 
-    padding: 18px;
-    border-radius: 12px;
+    padding: 20px;
+    border-radius: 16px;
 
-    margin-bottom: 18px;
-    transition: 0.2s;
+    margin-bottom: 20px;
+
+    box-shadow: 0 8px 25px rgba(255, 182, 193, 0.3);
 }
 
-.section:hover {
-    transform: translateY(-2px);
-}
-
-/* 📝 NOTES (Pinterest + Notion hybrid) */
+/* 📝 STICKY NOTES (CUTEEE) */
 .notes-container {
-    column-count: 3;
-    column-gap: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .note-card {
-    display: inline-block;
-    width: 100%;
-    margin-bottom: 15px;
+    width: 180px;
+    min-height: 140px;
 
-    background: #fffbea;
+    background: #fff9c4;
+
     padding: 12px;
-
-    border-radius: 10px;
-    border: 1px solid #fef3c7;
+    border-radius: 12px;
 
     font-size: 13px;
 
     position: relative;
+
+    transform: rotate(-2deg);
+    transition: 0.3s;
 }
 
-/* 📌 pin effect */
+/* random rotation for messy cute look */
+.note-card:nth-child(even) {
+    transform: rotate(2deg);
+}
+
+.note-card:hover {
+    transform: scale(1.05) rotate(0deg);
+}
+
+/* 📌 pin */
 .note-card::before {
-    content: "📌";
+    content: "📍";
     position: absolute;
     top: -10px;
-    left: 10px;
-    font-size: 16px;
-}
-
-/* 📱 responsive notes */
-@media (max-width: 900px) {
-    .notes-container {
-        column-count: 2;
-    }
-}
-
-@media (max-width: 500px) {
-    .notes-container {
-        column-count: 1;
-    }
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* ✅ TASKS */
@@ -128,76 +125,62 @@ body {
 }
 
 .task {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
+    background: #ffffff;
     padding: 10px;
-    border-radius: 8px;
+    border-radius: 10px;
 
-    transition: 0.2s;
-}
+    display: flex;
+    gap: 10px;
+    align-items: center;
 
-.task:hover {
-    background: #f9fafb;
-}
-
-.task input[type="checkbox"] {
-    transform: scale(1.1);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
 }
 
 /* 📊 STATS */
 .stats {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 12px;
 }
 
 .stat-card {
     background: #ffffff;
-    border: 1px solid #e5e7eb;
 
-    padding: 12px;
-    border-radius: 10px;
+    padding: 15px;
+    border-radius: 12px;
 
     text-align: center;
-    font-size: 13px;
+
+    box-shadow: 0 4px 15px rgba(255,182,193,0.2);
 }
 
-/* 🔗 QUICK LINKS */
-.quick-links-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-    gap: 12px;
-}
-
-/* 🔘 BUTTONS */
+/* 🔘 BUTTONS (SOFT PINK) */
 button {
-    background: #111827;
+    background: linear-gradient(135deg, #f472b6, #ec4899);
     color: white;
 
     border: none;
-    padding: 7px 12px;
-    border-radius: 8px;
+    padding: 8px 14px;
 
+    border-radius: 10px;
     cursor: pointer;
-    transition: 0.2s;
-    font-size: 13px;
+
+    transition: 0.3s;
 }
 
 button:hover {
-    background: #374151;
+    transform: scale(1.05);
 }
 
 /* 📥 INPUTS */
-input, select {
+input {
     width: 100%;
-    padding: 7px;
+    padding: 8px;
 
-    border-radius: 6px;
-    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    border: 1px solid #fbcfe8;
 
-    font-size: 13px;
+    background: #fff;
 }
 
 /* 🔐 LOGIN */
@@ -206,38 +189,25 @@ input, select {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    background: linear-gradient(135deg, #fbcfe8, #e0f2fe);
 }
 
 .login-card {
-    width: 100%;
-    max-width: 320px;
+    width: 320px;
 
-    background: white;
-    padding: 22px;
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(10px);
 
-    border-radius: 12px;
-    border: 1px solid #e5e7eb;
+    padding: 25px;
+    border-radius: 16px;
+
+    box-shadow: 0 10px 30px rgba(255,182,193,0.4);
 }
 
-/* ✨ HEADINGS */
-h1 {
-    font-size: 22px;
-}
-
+/* 💖 HEADINGS */
 h2 {
-    font-size: 16px;
-    margin-bottom: 10px;
-    color: #4338ca;
-}
-
-/* 🌸 SCROLLBAR (optional aesthetic) */
-::-webkit-scrollbar {
-    width: 6px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #d1d5db;
-    border-radius: 10px;
+    color: #ec4899;
 }
 
 
