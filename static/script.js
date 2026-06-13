@@ -9,6 +9,6 @@ new Chart(ctx, {
     },
     options: {
         responsive: true,
-        maintainAspectRatio: false   // 🔥 THIS fixes stretching
+        maintainAspectRatio: false   
     }
 });
